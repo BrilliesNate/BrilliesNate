@@ -1,0 +1,41 @@
+.tooltip-container {
+    display: inline-block;  
+    position: relative;
+    z-index: 2;
+  }
+
+ 
+
+  svg {
+      width: 1em;
+      cursor: pointer;
+      
+      
+  }
+
+ 
+
+  .cancel{
+      display: none;
+  }
+
+  svg {
+      width: 1em;
+      cursor: pointer;
+  }
+
+  .notify-container {
+      position: absolute;
+      bottom: 125%;
+      z-index: 9;
+      width: 300px;
+      background: white;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      font-size: .8em;
+      border-radius: .5em;
+      padding: 1em;
+      transform: scale(0);
+      transform-origin: bottom left;
+      transition: transform .4s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+  }

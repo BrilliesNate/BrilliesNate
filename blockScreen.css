@@ -1,0 +1,21 @@
+.blockScreen-container {
+    display: inline-block;  
+    position: relative;
+    z-index: 2;
+  }
+
+
+  .notify-container {
+      position: absolute;
+      bottom: 125%;
+      z-index: 9;
+      width: 320px;
+      height: 100px;    
+      background: rgba(128, 128, 128, 0.9);
+      font-size: .8em;
+      border-radius: .2em;
+      padding: 1em;
+      color: rgb(148, 0, 0);
+      
+  }
+ 

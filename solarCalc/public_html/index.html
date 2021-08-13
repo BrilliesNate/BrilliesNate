@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Solyc.css">
+
+    </head>
+    <body>
+        <h1>Solar Calculator</h1>
+        <div class = 'container'>
+            <div class = 'row'>
+                <div class = 'LocationConatiner'>
+                    <b>Location:</b> 
+
+                    <div class = 'location'>
+                        <div class='row'>
+                            <div class = 'latitudeContainer'>
+                                <b>Latitude:</b>                          
+                                <div class = 'inputBox'>
+                                    <!--                                    <input type="number" class ='latitudeBox' >-->
+                                </div>
+
+                            </div>
+                            <div class = 'LongitudeContainer'>
+                                <b>Longitude:</b>                          
+                                <div class = 'inputBox'></div>
+                            </div>
+                            <div class = 'TimeZoneContainer'>
+                                <b>TimeZone:</b>                          
+                                <div class = 'TimeZOneBox'></div>
+                            </div>
+                        </div>
+                        <div class = 'row'>                                                                            
+                            <button class="button-30" role="button">Save Location</button>
+                            <div class = 'UTCOffsetContainer'>
+                                <b>UTC Offset:</b>                          
+                                <div class = 'UTCOffsetBox'></div>
+                            </div> 
+
+                        </div>
+                    </div>
+                    <b>Date:</b>  
+                    <div class = 'date'>
+                        <div class='row'>
+                            <div class = 'latitudeContainer'>
+                                <b>Day:</b>                          
+                                <div class = 'inputBox'></div>
+                            </div>
+                            <div class = 'LongitudeContainer'>
+                                <b>Month:</b>                          
+                                <div class = 'inputBox'></div>
+                            </div>
+                            <div class = 'TimeZoneContainer'>
+                                <b>Year:</b>                          
+                                <div class = 'inputBox'></div>
+                            </div>
+                        </div>
+                        <div class = 'row1'>                                                                            
+                            <button class="button-30" role="button">Use Current Time</button>
+                            <div class = 'TimeContainer'>
+                                <b>Local Time:</b>  
+                                <div class = 'row'>
+                                    <div class = 'timeBox'></div>
+                                    <div class = 'timeBox'></div>
+                                    <div class = 'timeBox'></div>
+                                    <button class="button-31" role="button">AM</button>
+                                    <button class="button-31" role="button">PM</button>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="chartdiv"></div>
+            </div>
+
+
+            <div class = 'ResultConatiner'>
+                <b>Result</b>  
+                <div class = 'result'>
+                    <div class = 'row'>
+                        <div class = 'latitudeContainer'>
+                            <b>Equation of Time <br>
+                                (minutes):</b>                          
+                            <div class = 'resultBox'></div>
+                        </div>
+                        <div class = 'latitudeContainer'>
+                            <b>Solar Declination <br>
+                                (in°):</b>                          
+                            <div class = 'resultBox'></div>
+                        </div>
+                        <div class = 'latitudeContainer'>
+                            <b>Solar Noon <br>
+                                (hh:mm:ss):</b>                          
+                            <div class = 'resultBox'></div>
+                        </div>
+                        <div class = 'latitudeContainer'>
+                            <b>Apparent Sunrise <br>
+                                (hh:mm):</b>                          
+                            <div class = 'resultBox'></div>
+                        </div>
+                        <div class = 'latitudeContainer'>
+                            <b>Apparent Sunset <br>
+                                (hh:mm):</b>                          
+                            <div class = 'resultBox'></div>
+                        </div>
+                        <div class = 'latitudeContainer'>
+                            <b>Az/Ei <br>
+                                (in°) at Local Time:</b>                          
+                            <div class = 'resultBox'></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class = 'chartContainer'>
+                <b>Live solar efficiency acording to weather in your area </b> 
+                <div id="chartdiv1"></div>                
+            </div>
+
+        </div>    
+        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/geodata/continentsLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+        <script src ="DayNightMap.js"></script>
+        <script src ="LiveChart.js"></script>
+    </body>
+</html>

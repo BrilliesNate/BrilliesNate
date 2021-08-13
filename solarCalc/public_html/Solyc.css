@@ -1,0 +1,296 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 Aug 2021, 08:35:55
+    Author     : user pc
+*/
+.container{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.location{
+    width:400px;
+    height: 150px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.1em;
+    border-style: solid;
+    background:#F5F5F5;
+
+    padding:1rem!important;
+}
+
+.date{
+    width:400px;
+    height: 150px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.1em;
+    border-style: solid;
+    background:#F5F5F5;
+    padding:1rem!important;
+}
+.LocationConatiner{
+    margin: 35px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+.DateConatiner{
+    margin: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center; 
+}
+.ResultConatiner{
+    margin: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;   
+}
+
+.result{
+    width:800px;
+    height: 100px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.1em;
+    border-style: solid;
+    background:#F5F5F5;
+    padding:1rem!important;
+}
+.latitudeContainer{
+    margin: 7px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.LongitudeContainer{
+    margin: 5px;
+    display: block;
+    justify-content: center;
+    align-items: center; 
+}
+.LongitudeBox {
+    width:100px;
+    height: 30px;
+    border-color: gray;
+    border-width: thin;
+    border-radius: 0.1em;
+    border-style: solid; 
+    background:white;
+}
+
+.TimeZoneContainer{   
+    margin: 5px;
+    display: block;
+    justify-content: center;
+    align-items: center; 
+}
+.TimeZOneBox{
+
+    width:190px;
+    height: 30px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.1em;
+    border-style: solid; 
+    background:white;
+}
+
+.row{
+    display: flex;    
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+
+.button-30 {
+
+    margin-left: 5px;
+    margin-top: 25px;
+    width:120px;
+    height: 40px;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+
+
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+
+}
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+
+.UTCOffsetContainer{
+    margin-left: 110px;
+
+    display: block;
+    justify-content: center;
+    align-items: center; 
+}
+.UTCOffsetBox{
+
+    width:190px;
+    height: 30px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.1em;
+    border-style: solid; 
+    background:white;
+}
+
+#chartdiv {
+    width: 650px;
+    height: 420px;
+    background-color:white;
+}
+#chartdiv1 {
+    width: 100%;
+    height: 180px;
+}
+.inputBox{
+    width:100px;
+    height: 30px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.2em;
+    border-style: solid; 
+    background:white; 
+}
+.resultBox{
+    width:100px;
+    height: 30px;
+    border-color: #DCDCDC;
+    background:white;
+
+    border-width: thin;
+    border-radius: 0.2em;
+    border-style: solid; 
+}
+
+.timeBox{
+    margin:5px;
+    width:40px;
+    height: 30px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.2em;
+    border-style: solid; 
+    background:white;
+}
+.TimeContainer{
+    margin-left: 50px;
+
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.row1{
+
+    display: flex;    
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; 
+}
+
+.button-31 {
+
+    margin-left: 5px;
+    margin-top: 25px;
+    width:30px;
+    height: 20px;
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+
+
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+
+}
+
+.button-31:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-31:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-31:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+.chartContainer{
+    margin: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center; 
+}
+
+

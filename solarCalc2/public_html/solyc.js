@@ -32,10 +32,23 @@ function getDateTime() {
     // document.getElementById("month").innerHTML = d.getMonth() +1;
     // document.getElementById("day").innerHTML = d.getDate();
     // Getting Time Hours/Minutes/Seconds
-    document.getElementById("hour").innerHTML = d.getHours();
+    document.getElementById("hour").value.innerHTML = d.getHours();
     document.getElementById("minutes").innerHTML = d.getMinutes();
     document.getElementById("seconds").innerHTML = d.getSeconds();
 }
+
+function checkSunPos(){
+    
+    let hour = document.getElementById('hour');
+    let currnetVal = hour.value;
+    
+    if (currnetVal >= '16:57'){
+        console.log('Hour is 16')
+        document.getElementById('svg7').style.transform='rotate(50deg)';
+    }
+
+}
+
 
 function getUtcOffset() {
     let d = new Date();
@@ -43,93 +56,179 @@ function getUtcOffset() {
     document.getElementById("UCT").innerHTML = n;
 }
 
-function oriantaion(){
-    let slider = document.getElementById('panelOriantaion');
-    let sliderOutput = document.getElementById('panelBox');
+let elem1 = document.getElementById('sunC');
 
-    sliderOutput.innerHTML = slider.value;
+let rangeValue1 = function () {
+    let newValue1 = elem1.value;
+    let target = document.querySelector('.value1');
+    target.innerHTML = + newValue1 + '°';
+    let circle1 = document.getElementById("svg6");
+    
+    circle1.style.transform = 'rotate(' + newValue1 + 'deg)';
+}
+elem1.addEventListener("input", rangeValue1);
+
+// let element = document.getElementById('sunC')
+
+// let sunValue = function() {
+//     let newValue1 = element.value;
+//     let target = document.getElementById('value1');
+//     target.innerHTML = + newValue1;
+// }
+
+
+
+let elem = document.querySelector('input[type="range"]');
+
+let rangeValue = function () {
+    let newValue = elem.value;
+    let target = document.querySelector('.value');
+    target.innerHTML = + newValue + '°';
+    let circle = document.getElementById("svg5");
+    var compas;
+    circle.style.transform = 'rotate(' + newValue + 'deg)';
+
+
+    if ((newValue >= 0 && newValue <= 11) || (newValue >= 349 && newValue <= 360)) {
+        compas = "N";
+        target.innerHTML = compas + newValue + '°';
+
+    }
+    if ((newValue > 11 && newValue <= 33)) {
+        compas = "NNE";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 33 && newValue <= 56)) {
+        compas = "NE";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 56 && newValue <= 79)) {
+        compas = "ENE";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 79 && newValue <= 101)) {
+        compas = "E";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 101 && newValue <= 124)) {
+        compas = "ESE";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 101 && newValue <= 124)) {
+        compas = "ESE";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 124 && newValue <= 146)) {
+        compas = "SE";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 146 && newValue <= 169)) {
+        compas = "SSE";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 169 && newValue <= 191)) {
+        compas = "S";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 191 && newValue <= 214)) {
+        compas = "SSW";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 214 && newValue <= 236)) {
+        compas = "SW";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 236 && newValue <= 259)) {
+        compas = "WSW";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 259 && newValue <= 281)) {
+        compas = "W";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 281 && newValue <= 303)) {
+        compas = "WNW";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 303 && newValue <= 326)) {
+        compas = "NW";
+        target.innerHTML = compas + newValue + '°';
+    }
+    if ((newValue > 326 && newValue < 349)) {
+        compas = "NNW";
+        target.innerHTML = compas + newValue + '°';
+    }
+
+
 
 }
-let rotateAngle = slider.value;
 
-function rotate (){
-let panel = document.getElementById('path3086')
+elem.addEventListener("input", rangeValue);
 
-panel.setAttribute('style', 'transform: rotate')
-
-}
-
-
-
-// function compass(orient) {
+// function compass(newValue) {
 //     var compas;
-//     if ((orient >= 0 && orient <= 11) || (orient >= 349 && orient <= 360)) {
+//     if ((newValue >= 0 && newValue <= 11) || (newValue >= 349 && newValue <= 360)) {
 //         compas = "N";
+//         console.log('N')
 //     }
 
-//     if ((orient > 11 && orient <= 33)) {
-//         compas = "NNE";
-//     }
+//     
 
-//     if ((orient > 33 && orient <= 56)) {
-//         compas = "NE";
-//     }
+//     
 
-//     if ((orient > 56 && orient <= 79)) {
-//         compas = "ENE";
-//     }
+//    
 
-//     if ((orient > 79 && orient <= 101)) {
-//         compas = "E";
-//     }
+//     
 
-//     if ((orient > 101 && orient <= 124)) {
-//         compas = "ESE";
-//     }
+//     // 
+//     // 
 
-//     if ((orient > 124 && orient <= 146)) {
-//         compas = "SE";
-//     }
+//     // 
+//     // 
 
-//     if ((orient > 146 && orient <= 169)) {
-//         compas = "SSE";
-//     }
+//     // 
 
-//     if ((orient > 169 && orient <= 191)) {
-//         compas = "S";
-//     }
+//     // 
 
-//     if ((orient > 191 && orient <= 214)) {
-//         compas = "SSW";
-//     }
+//     // 
 
-//     if ((orient > 214 && orient <= 236)) {
-//         compas = "SW";
-//     }
+//     // 
 
-//     if ((orient > 236 && orient <= 259)) {
-//         compas = "WSW";
-//     }
+//     // 
 
-//     if ((orient > 259 && orient <= 281)) {
-//         compas = "W";
-//     }
+//     // 
 
-//     if ((orient > 281 && orient <= 303)) {
-//         compas = "WNW";
-//     }
-
-//     if ((orient > 303 && orient <= 326)) {
-//         compas = "NW";
-//     }
-
-//     if ((orient > 326 && orient < 349)) {
-//         compas = "NNW";
-//     }
+//     // 
 
 //     return compas;
 
 // }
+
+
+
+
+// function oriantaion(){
+//     let slider = document.getElementById('panelOriantaion');
+//     let sliderOutput = document.getElementById('panelBox');
+
+//     sliderOutput.innerHTML = slider.value;
+
+
+
+
+// }
+// let rotateAngle = slider.value;
+
+// function rotate (){
+// let panel = document.getElementById('path3086')
+
+// panel.setAttribute('style', 'transform: rotate(slider.value)')
+
+// }
+
+
+
+
 
 // function rotating() {
 
@@ -154,9 +253,6 @@ panel.setAttribute('style', 'transform: rotate')
 //     var b = panel.rotate(orient, panel.x() + 6, panel.y() + 40)
 // }
 
-// let circle = document.getElementById("image2717")
-
-// circle.style.transform = 'rotate:(100deg)';
 
 
 

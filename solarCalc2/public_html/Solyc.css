@@ -24,6 +24,17 @@ and open the template in the editor.
 
     padding:1rem!important;
 }
+.location1{
+    width:400px;
+    height: 100px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.1em;
+    border-style: solid;
+    background:#F5F5F5;
+
+    padding:1rem!important;
+}
 
 .date{
     width:400px;
@@ -61,8 +72,8 @@ and open the template in the editor.
 }
 
 .result{
-    width:900px;
-    height: 100px;
+    width:400px;
+    height: 325px;
     border-color: #DCDCDC;
     border-width: thin;
     border-radius: 0.1em;
@@ -71,6 +82,13 @@ and open the template in the editor.
     padding:1rem!important;
 }
 .latitudeContainer{
+    margin: 7px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.latitudeContainer1{
+    
     margin: 7px;
     display: block;
     justify-content: center;
@@ -101,7 +119,7 @@ and open the template in the editor.
 }
 .TimeZOneBox{
 
-    width:190px;
+    width:80px;
     height: 30px;
     border-color: #DCDCDC;
     border-width: thin;
@@ -111,6 +129,13 @@ and open the template in the editor.
 }
 
 .row{
+    display: flex;    
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row2{
+    border-style: solid;
     display: flex;    
     flex-wrap: wrap;
     margin-right: -15px;
@@ -127,16 +152,14 @@ and open the template in the editor.
     height: 40px;
 }
 .button-33 {
-
-    margin-left: 5px;
-    margin-bottom: 5px;
+    margin:10px;
     width:100px;
     height: 20px;
 }
 
 
 .UTCOffsetContainer{
-    margin-left: 50px;
+    margin-left: 63px;
 
     display: block;
     justify-content: center;
@@ -162,8 +185,8 @@ and open the template in the editor.
     width: 100%;
     height: 180px;
 }
-.inputBox{
-    width:90px;
+.latLong{
+    width:150px;
     height: 20px;
     border-color: #DCDCDC;
     border-width: thin;
@@ -172,6 +195,7 @@ and open the template in the editor.
     background:white; 
 }
 .panelTiltBox{
+    margin-top: 20px;
     width:90px;
     height: 20px;
    
@@ -203,7 +227,7 @@ and open the template in the editor.
 
 .timeBox{
     margin:5px;
-    width:40px;
+    width:80px;
     height: 20px;
     border-color: #DCDCDC;
     border-width: thin;
@@ -241,6 +265,130 @@ and open the template in the editor.
     align-items: center; 
 }
 
-#path3086{
-    fill:red;
+/* #svg5{
+ -webkit-transition: -webkit-transform 1s;   
+ 
 }
+
+#svg5:hover{
+    -webkit-transform: rotate(360deg);
+} */
+
+.img-overlay-wrap {
+    position: relative;
+    margin-top: 30px;
+    display: inline-block; /* <= shrinks container to image size */
+    transition: transform 150ms ease-in-out;
+  }
+  
+  .img-overlay-wrap img { /* <= optional, for responsiveness */
+     display: block;
+     max-width: 100%;     
+     height: auto;
+  }
+  
+  .img-overlay-wrap svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #svg5{
+      margin-left: 70px;
+      margin-top: 70px;
+      width:160px;
+      height:160px;
+      
+  }
+  #svg6{
+    margin-left: 50px;
+    margin-top: 100px;
+    width:300px;
+    height:300px;
+    
+  }
+  #svg7{
+    margin-left: 1px;
+    margin-top: 1px;
+    width:300px;
+    height:300px;
+    
+  }
+ 
+  .inputBox {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    width: 125px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+  }
+  .inputBox::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #8d8a89;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }​
+  .inputBox::-webkit-slider-thumb:hover {
+      background-color: white;
+      border: 2px solid #9b9594;
+    }
+    .inputBox::-webkit-slider-thumb:active {
+      transform: scale(1.5);
+    }
+
+    .value {
+     
+        font-size: 1.5em;
+        width: 50px; 
+        height: 20px;
+        line-height: 30px;
+        margin: 5px auto;
+        letter-spacing: -.07em;
+        text-shadow: white 2px 2px 2px;
+      }
+  .inputBox1 {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    width: 125px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+  }
+  .inputBox1::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #8d8a89;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }​
+  .inputBox1::-webkit-slider-thumb:hover {
+      background-color: white;
+      border: 2px solid #9b9594;
+    }
+    .inputBox1::-webkit-slider-thumb:active {
+      transform: scale(1.5);
+    }
+
+    .value1 {
+     
+        font-size: 1.5em;
+        width: 50px; 
+        height: 20px;
+        line-height: 30px;
+        margin: 5px auto;
+        letter-spacing: -.07em;
+        text-shadow: white 2px 2px 2px;
+      }
+

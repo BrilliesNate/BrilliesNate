@@ -42,9 +42,9 @@ function checkSunPos(){
     let hour = document.getElementById('hour');
     let currnetVal = hour.value;
     
-    if (currnetVal >= '16:57'){
+    if (currnetVal >= '12:00'){
         console.log('Hour is 16')
-        document.getElementById('svg7').style.transform='rotate(50deg)';
+        document.getElementById('svg7').style.transform='rotate(-50deg)';
     }
 
 }
@@ -67,6 +67,7 @@ let rangeValue1 = function () {
     circle1.style.transform = 'rotate(' + newValue1 + 'deg)';
 }
 elem1.addEventListener("input", rangeValue1);
+
 
 // let element = document.getElementById('sunC')
 

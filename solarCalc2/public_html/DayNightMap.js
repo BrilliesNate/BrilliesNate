@@ -72,16 +72,26 @@ am4core.ready(function () {
     graticuleSeires.fitExtent = false;
 
 // add slider to chart container in order not to occupy space
+    let dateContainer = document.getElementById('dateContainer')
     var slider = mapChart.chartContainer.createChild(am4core.Slider);
     slider.start = 0.5;
     slider.valign = "bottom";
     slider.padding(0, 30, 0, 80);
     slider.background.padding(0, 30, 0, 80);
     slider.marginBottom = 15;
+     slider.opacity = 0;
     slider.events.on("rangechanged", function () {
-        updateDateNight(new Date().getTime() + (slider.start - 0.5) * 1000 * 60 * 60 * 24 * 2 * 2);
+        let t = new Date().getTime();
+        updateDateNight(t + (slider.start - 0.5) * 1000 * 60 * 60 * 24 * 2 * 2);
+        console.log(t)
+        console.log(slider.start)
+        let newD = new Date(t)
+        console.log(newD)
     })
 
+
+
+    
 
     function updateDateNight(time) {
         var sunPosition = solarPosition(time);
@@ -92,6 +102,8 @@ am4core.ready(function () {
         night.multiPolygon = am4maps.getCircle(sunPosition.longitude + 180, -sunPosition.latitude, 91);
         night2.multiPolygon = am4maps.getCircle(sunPosition.longitude + 180, -sunPosition.latitude, 89);
         nightSeries.invalidate();
+        console.log(time)
+       
     }
 
     var button = mapChart.createChild(am4core.Button);
@@ -100,6 +112,7 @@ am4core.ready(function () {
     button.marginRight = 40;
     button.valign = "top";
     button.label.text = "Show Globe";
+
 
     button.events.on("hit", function () {
         if (button.label.text == "Show Globe") {

@@ -16,13 +16,16 @@ and open the template in the editor.
 .location{
     width:400px;
     height: 150px;
+    
+    background:white;
+
+    padding:1rem!important;
+}
+.wrapper{
     border-color: #DCDCDC;
     border-width: thin;
     border-radius: 0.1em;
     border-style: solid;
-    background:#F5F5F5;
-
-    padding:1rem!important;
 }
 .location1{
     width:400px;
@@ -43,7 +46,7 @@ and open the template in the editor.
     border-width: thin;
     border-radius: 0.1em;
     border-style: solid;
-    background:#F5F5F5;
+    background:white;
     padding:1rem!important;
 }
 .svg{
@@ -52,10 +55,24 @@ and open the template in the editor.
    
 }
 .LocationConatiner{
-    margin: 35px;
+    margin: 5px;
     display: block;
     justify-content: center;
     align-items: center;
+   
+    background:white;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.LocationConatiner1{
+    margin: 5px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 15px;
+    
 
 }
 .DateConatiner{
@@ -78,7 +95,7 @@ and open the template in the editor.
     border-width: thin;
     border-radius: 0.1em;
     border-style: solid;
-    background:#F5F5F5;
+    background:white;
     padding:1rem!important;
 }
 .latitudeContainer{
@@ -90,6 +107,13 @@ and open the template in the editor.
 .latitudeContainer1{
     
     margin: 7px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.latitudeContainer3{
+   
+    
     display: block;
     justify-content: center;
     align-items: center;
@@ -142,6 +166,13 @@ and open the template in the editor.
     margin-left: -15px;
 }
 
+.row3{
+    display: flex;    
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;  
+}
+
 
 
 .button-30 {
@@ -153,8 +184,8 @@ and open the template in the editor.
 }
 .button-33 {
     margin:10px;
-    width:100px;
-    height: 20px;
+    width:120px;
+    height: 40px;
 }
 
 
@@ -180,9 +211,11 @@ and open the template in the editor.
     width: 650px;
     height: 420px;
     background-color:white;
+    margin-bottom: 10px;
 }
 #chartdiv1 {
-    width: 100%;
+    margin-top: 60px;
+    width: 720px;
     height: 180px;
 }
 .latLong{
@@ -202,6 +235,15 @@ and open the template in the editor.
 }
 .calanderBox{
     width:130px;
+    height: 20px;
+    border-color: #DCDCDC;
+    border-width: thin;
+    border-radius: 0.2em;
+    border-style: solid; 
+    background:white; 
+}
+.calanderBox1{
+    width:30px;
     height: 20px;
     border-color: #DCDCDC;
     border-width: thin;
@@ -285,16 +327,18 @@ and open the template in the editor.
      display: block;
      max-width: 100%;     
      height: auto;
+     margin-left: 11px;
   }
   
   .img-overlay-wrap svg {
     position: absolute;
     top: 0;
     left: 0;
+    
   }
 
   #svg5{
-      margin-left: 70px;
+      margin-left: 80px;
       margin-top: 70px;
       width:160px;
       height:160px;
@@ -308,10 +352,10 @@ and open the template in the editor.
     
   }
   #svg7{
-    margin-left: 1px;
-    margin-top: 1px;
-    width:300px;
-    height:300px;
+    margin-left: 6px;
+    margin-bottom: 10px;
+    width:310px;
+    height:310px;
     
   }
  
@@ -392,3 +436,10 @@ and open the template in the editor.
         text-shadow: white 2px 2px 2px;
       }
 
+.colortab{
+      background:#025f5f;
+      }
+
+.text{
+    color:white;
+}

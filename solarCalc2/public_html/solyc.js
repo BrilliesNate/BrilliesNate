@@ -43,12 +43,12 @@ function checkSunPos(){
     let currnetVal = hour.value;
     
     if (currnetVal >= '12:00'){
-        console.log('Hour is 16')
-        document.getElementById('svg7').style.transform='rotate(-50deg)';
+        let d = new Date();
+        console.log(d)
+        document.getElementById('svg7').style.transform='rotate(-60deg)';
     }
 
 }
-
 
 function getUtcOffset() {
     let d = new Date();
@@ -165,6 +165,8 @@ let rangeValue = function () {
 }
 
 elem.addEventListener("input", rangeValue);
+
+
 
 // function compass(newValue) {
 //     var compas;

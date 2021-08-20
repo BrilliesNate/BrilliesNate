@@ -27,28 +27,12 @@ function showPosition(position) {
 function getDateTime() {
     let d = new Date();
 
-    // Getting Date Year/Month/Day
-    // document.getElementById("year").innerHTML = d.getFullYear();
-    // document.getElementById("month").innerHTML = d.getMonth() +1;
-    // document.getElementById("day").innerHTML = d.getDate();
-    // Getting Time Hours/Minutes/Seconds
     document.getElementById("hour").value.innerHTML = d.getHours();
     document.getElementById("minutes").innerHTML = d.getMinutes();
     document.getElementById("seconds").innerHTML = d.getSeconds();
 }
 
-function checkSunPos(){
-    
-    let hour = document.getElementById('hour');
-    let currnetVal = hour.value;
-    
-    if (currnetVal >= '12:00'){
-        let d = new Date();
-        console.log(d)
-        document.getElementById('svg7').style.transform='rotate(-60deg)';
-    }
 
-}
 
 function getUtcOffset() {
     let d = new Date();
@@ -63,19 +47,12 @@ let rangeValue1 = function () {
     let target = document.querySelector('.value1');
     target.innerHTML = + newValue1 + '°';
     let circle1 = document.getElementById("svg6");
-    
+
     circle1.style.transform = 'rotate(' + newValue1 + 'deg)';
 }
 elem1.addEventListener("input", rangeValue1);
 
 
-// let element = document.getElementById('sunC')
-
-// let sunValue = function() {
-//     let newValue1 = element.value;
-//     let target = document.getElementById('value1');
-//     target.innerHTML = + newValue1;
-// }
 
 
 
@@ -164,168 +141,120 @@ let rangeValue = function () {
 
 }
 
+// Make a weather API request
+
+
+
+// mouse over function.
+function over() {
+    this.timeout = setTimeout(function () {
+        $(".more-ot-alert").fadeIn("fast");
+        // IE8 animation polyfill
+        if ($("html").hasClass("lt-ie9")) {
+            var speed = 300;
+            var times = 3;
+            var loop = setInterval(anim, 300);
+            function anim() {
+                times--;
+                if (times === 0) { clearInterval(loop); }
+                $(".more-ot-alert").animate({ left: 450 }, speed).animate({ left: 440 }, speed);
+                //.stop( true, true ).fadeIn();
+            };
+            anim();
+        };
+    }, 1000)
+}
+
+function left() {
+
+    if (this.timeout) {
+        clearTimeout(this.timeout)
+        closeAlert()
+    }
+
+}
+
+// let btn = document.getElementById('btn')
+// btn.addEventListener('mouseenter',over)
+// btn.addEventListener('mouseleave',left)
+
+
+
+
 elem.addEventListener("input", rangeValue);
 
-
-
-// function compass(newValue) {
-//     var compas;
-//     if ((newValue >= 0 && newValue <= 11) || (newValue >= 349 && newValue <= 360)) {
-//         compas = "N";
-//         console.log('N')
-//     }
-
-//     
-
-//     
-
-//    
-
-//     
-
-//     // 
-//     // 
-
-//     // 
-//     // 
-
-//     // 
-
-//     // 
-
-//     // 
-
-//     // 
-
-//     // 
-
-//     // 
-
-//     // 
-
-//     return compas;
-
-// }
+function closeAlert() {
+    setTimeout(function () {
+        $(".more-ot-alert").fadeOut("fast");
+    }, 1000);
+}
+// function openAlert() {
 
 
 
+//     setTimeout(function openAlert() {
 
-// function oriantaion(){
-//     let slider = document.getElementById('panelOriantaion');
-//     let sliderOutput = document.getElementById('panelBox');
-
-//     sliderOutput.innerHTML = slider.value;
-
-
+//     } );
 
 
 // }
-// let rotateAngle = slider.value;
+$(".close-ot-alert").on("click", function () {
+    closeAlert()
+});
 
-// function rotate (){
-// let panel = document.getElementById('path3086')
+$(".open-ot-alert").on("click", function () {
+    openAlert();
+});
 
-// panel.setAttribute('style', 'transform: rotate(slider.value)')
+$(document).keydown(function (e) {
+    if (e.keyCode == 27) { closeAlert(); }
+    if (e.keyCode == 67) { openAlert(); } // C is for click?
+});
 
-// }
+let btn = document.getElementById('btn');
 
+function ripple(e) {
 
+  // Setup
+  let posX = this.offsetLeft;
+  let posY = this.offsetTop;
+  let buttonWidth = this.offsetWidth;
+  let buttonHeight =  this.offsetHeight;
+  
+  // Add the element
+  let ripple = document.createElement('span');
+  
+  this.appendChild(ripple);
 
+  
+ // Make it round!
+  if(buttonWidth >= buttonHeight) {
+    buttonHeight = buttonWidth;
+  } else {
+    buttonWidth = buttonHeight; 
+  }
+  
+  // Get the center of the element
+  var x = e.pageX - posX - buttonWidth / 2;
+  var y = e.pageY - posY - buttonHeight / 2;
+  
+ 
+  ripple.style.width = `${buttonWidth}px`;
+  ripple.style.height = `${buttonHeight}px`;
+  ripple.style.top = `${y}px`;
+  ripple.style.left = `${x}px`;
+  
+  ripple.classList.add('rippleAnimation');
+  
+  setTimeout(() => {
+    this.removeChild(ripple);
+  }, 1000);
 
+}
 
-// function rotating() {
-
-// }
-
-
-
-// var sliderOrientation = document.getElementById("panelOriantaion");
-// var outputOrientation = document.getElementById("long");
-
-// let panel = document.getElementById('path3086');
-
-// outputOrientation.innerHTML = sliderOrientation.value;
-// sliderOrientation.oninput = function () {
-//     var orient = sliderOrientation.value;
-//     var compas = compass(orient);
-//     compassArrows(orient);
-//     outputOrientation.innerHTML = compas + " - " + orient;
-// }
-
-// function compassArrows(orient, color) {
-//     var b = panel.rotate(orient, panel.x() + 6, panel.y() + 40)
-// }
-
-
-
-
-
-// let data = {
-//     date: new Date(),
-//     time: new Date().getTime(),
-//     julianDay: 2455386,
-//     julianCentury: 0.10468889,
-//     geomMeanLongSun: 89.3396,
-//     geamMeanAnomSun: 4126.222,
-//     eccentEarthOrbit: 0.016704,
-//     solar: {
-//         solarNoon: '13:01:42'
-//     },
-//     obliq: {
-//         meanObliq: 23.43793,
-//         obliqCorr: 23.43849
-//     },
-//     sun: {
-//         sunTrueLong: 89.78646,
-//         sunTrueAnom: 4126.669,
-//         sunRadVextor: 1.01624,
-//         sunAppLong: 89.78544
-//     }
-
-// }
-
-// (function (root) {
-
-//     let Solyc = function () {
-//         this.result = 0;
-//       //  init();
-//     };
-
-//     let fn = Solyc.prototype;
-
-//     fn.getDaily = function (lat, long) {
-//         return getJulianDay.call(this, lat, long);
-//     };
-
-//     fn.recalculate = function (lat, long) {
-//         this.lat = lat;
-//         this.long = long;
-//         this.result = lat - long;
-//         return this;
-
-//     };
-
-//     fn.date = function () {
-//         let d = new Date();
-//         return d;
-//     };
-
-//     fn.time = function () {
-//         let d = new Date();
-//         let t = d.getTime();
-//         return t;
-//     };
-
-//  //   function init() {
-
-//    // }
+btn.addEventListener('click', ripple);
 
 
 
-//     function getJulianDay() {
-//         this.result = this.lat - this.long;
-//         return result;
-//     }
 
-//     root.Solyc = new Solyc();
-// }(window))
+

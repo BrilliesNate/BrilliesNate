@@ -15,7 +15,11 @@ and open the template in the editor.
 </head>
 
 <body>
-    <h1>Solar Calculator</h1>
+    <div class = 'headingContainer'>
+
+        <h1 class='heading'>Solar Calculator</h1>
+       
+    </div>
     <div class='container'>
         <div class='row'>
             <div class='LocationConatiner'>
@@ -30,32 +34,29 @@ and open the template in the editor.
                     <div class='location'>
                         <div class='row'>
                             <div class='latitudeContainer'>
-                                <b>Latitude:</b>
+                                <b class='text1'>Latitude:</b>
                                 <div class='latLong' id='lat'>
                                     <!-- <input type="number" class='inputBox' > -->
                                 </div>
 
                             </div>
                             <div class='LongitudeContainer'>
-                                <b>Longitude:</b>
+                                <b class='text1'>Longitude:</b>
                                 <div class='latLong' id='long'>
                                     <!-- <input type="number" class='inputBox'> -->
                                 </div>
                             </div>
-                            <div class='TimeZoneContainer'>
-                                <b>TimeZone:</b>
-                                <div class='TimeZOneBox'></div>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <button class="button-30" role="button" onclick="getLocation()">Get Location</button>
-                            <button class="button-32" role="button" onclick="getUtcOffset()">Get UTC Offset</button>
-                            <div class='UTCOffsetContainer'>
-                                <b>UTC Offset:</b>
-                                <div class='UTCOffsetBox' id='UCT'></div>
-                            </div>
 
                         </div>
+                        <div class='row1' id='dateContainer'>
+
+                            <button class="button-30" role="button" onclick="getLocation()" >Get Location</button>
+
+                        </div>
+                            <!-- <button class="button-32" role="button" onclick="getUtcOffset()">Get UTC Offset</button> -->
+
+
+                        
                     </div>
                 </div>
                 <!-- k -->
@@ -68,18 +69,25 @@ and open the template in the editor.
                     <div class='date'>
                         <div class='row'>
                             <div class='latitudeContainer'>
-                                <b>Date:</b>
+                                <b class='text1'>Date:</b>
                                 <div class='calanderBox' id='day'>
-                                    <input type="Date" class='calanderBox'>
+                                    <input type="Date" class='calanderBox' id='date'>
+
                                 </div>
                             </div>
                             <div class='TimeContainer'>
-                                <b>Local Time:</b>
+                                <b class='text1'>Local Time:</b>
+
                                 <div class='row'>
 
                                     <input type="time" class='timeBox' id='hour'>
 
-
+                                    <div class="more-ot-alert">
+                                        <span class="close-ot-alert">
+                                            <i class="fa fa-close"></i>
+                                        </span>
+                                        <p>Enter Date/Time</p>
+                                    </div>
 
                                 </div>
 
@@ -99,21 +107,23 @@ and open the template in the editor.
                         </div> -->
                         </div>
                         <div class='row1' id='dateContainer'>
-                            <button class="button-30" role="button" onclick="updateDateNight(time +6300000),checkSunPos()">Sun Posistion</button>
+
+                            <button class="button-30" role="button" onclick="buttonC()" id='btn'>Sun Posistion</button>
 
                         </div>
+                            
                     </div>
                 </div>
                 <!-- k -->
                 <div class='wrapper'>
                     <div class='colortab'>
 
-                        <b class="text">Result</b>
+                        <b class="text">temperature</b>
 
                     </div>
 
                     <div class='result'>
-                        <div class='row'>
+                        <!-- <div class='row'>
                             <div class='latitudeContainer'>
                                 <b>Equation of Time <br>
                                     (minutes):</b>
@@ -122,7 +132,7 @@ and open the template in the editor.
                             <div class='latitudeContainer'>
                                 <b>Solar Declination <br>
                                     (in°):</b>
-                                <div class='resultBox'></div>
+                                <div class='resultBox' id='solarDeclination'></div>
                             </div>
 
 
@@ -162,16 +172,21 @@ and open the template in the editor.
                                 <button class="button-33" role="button">Calculate</button>
 
                             </div>
+                        </div> -->
+                        <div id="chartdiv3">
+
                         </div>
+                        <b class="text2">Above 25°C your panel efficiency drops 0.5% per °C</b>
+                        <!-- g -->
                     </div>
                 </div>
 
-                <!-- t -->
+
             </div>
             <div class="LocationConatiner">
 
                 <div id="chartdiv"></div>
-                <div id="chartdiv1"></div>
+                <div id="chartdiv2"></div>
 
             </div>
             <div class='LocationConatiner'>
@@ -185,7 +200,7 @@ and open the template in the editor.
                     <div class='location'>
                         <div class='row'>
                             <div class='latitudeContainer'>
-                                <b>Panel Orientation:</b>
+                                <b class='text1'>Panel Orientation:</b>
                                 <div class='panelTiltBox' id='lat'>
                                     <input type="range" class='inputBox' min='0' max='360' value='0'>
                                 </div>
@@ -195,7 +210,7 @@ and open the template in the editor.
                                 </div>
                             </div>
                             <div class='latitudeContainer'>
-                                <b>Panel Tilt:</b>
+                                <b class='text1'>Panel Tilt:</b>
                                 <div class='panelTiltBox' id='lat'>
                                     <input type="range" class='inputBox1' min='0' max='90' value='0' id='sunC'>
                                 </div>
@@ -1401,7 +1416,7 @@ and open the template in the editor.
                     <div class='location'>
                         <div class='row'>
                             <div class='latitudeContainer'>
-                                <b>Number of Panels:</b>
+                                <b class='text1'>Number of Panels:</b>
                                 <div class='panelTiltBox' id='lat'>
                                     <input type="range" class='NumberOfPanelSlider' min='0' max='500' value='0'>
                                 </div>
@@ -1411,7 +1426,7 @@ and open the template in the editor.
                                 </div>
                             </div>
                             <div class='latitudeContainer'>
-                                <b>Panel Power:</b>
+                                <b class='text1'>Panel Power:</b>
                                 <div class='panelTiltBox' id='lat'>
                                     <input type="range" class='PowerPanelSlider' min='0' max='500' value='0' id='sunC'>
                                 </div>
@@ -1454,6 +1469,7 @@ and open the template in the editor.
         <!-- g -->
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
@@ -1462,8 +1478,10 @@ and open the template in the editor.
 
 
     <script src="DayNightMap.js"></script>
-    <script src="LiveChart.js"></script>
+    <script src="powerChartDaily.js"></script>
     <script src="solyc.js"></script>
+    <script src="tempChart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>

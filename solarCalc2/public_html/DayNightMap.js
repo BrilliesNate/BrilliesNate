@@ -23,9 +23,9 @@ mapChart.projection = new am4maps.projections.Miller;
 // prevent dragging
 mapChart.seriesContainer.draggable = false;
 mapChart.seriesContainer.resizable = false;
-// prevent zooming
+
 mapChart.minZoomLevel = 1;
-// countries
+
 var countriesSeries = mapChart.series.push(new am4maps.MapPolygonSeries());
 countriesSeries.useGeodata = true;
 countriesSeries.mapPolygons.template.fill = am4core.color("#47c78a");
@@ -34,7 +34,7 @@ countriesSeries.mapPolygons.template.stroke = am4core.color("#47c78a");
 var colorSet = new am4core.ColorSet();
 var polygonTemplate = countriesSeries.mapPolygons.template;
 
-// night series
+
 var nightSeries = mapChart.series.push(new am4maps.MapPolygonSeries());
 nightSeries.ignoreBounds = true;
 var night = nightSeries.mapPolygons.create();
@@ -52,13 +52,13 @@ night2.stroke = am4core.color("#000000");
 night2.strokeOpacity = 0;
 
 
-// images series
+
 var imagesSeries = mapChart.series.push(new am4maps.MapImageSeries())
 var tooltip = imagesSeries.tooltip;
 tooltip.label.padding(15, 15, 15, 15);
 tooltip.background.cornerRadius = 25;
 
-// sun
+
 var sun = imagesSeries.mapImages.create();
 var suncircle = sun.createChild(am4core.Circle);
 suncircle.radius = 10;
@@ -66,14 +66,14 @@ suncircle.fill = am4core.color("#ffba00");
 suncircle.strokeOpacity = 0;
 sun.filters.push(new am4core.BlurFilter());
 
-// graticule
-var graticuleSeires = mapChart.series.push(new am4maps.GraticuleSeries());
+
+let graticuleSeires = mapChart.series.push(new am4maps.GraticuleSeries());
 graticuleSeires.mapLines.template.stroke = am4core.color("#ffffff");
 graticuleSeires.fitExtent = false;
 
-// add slider to chart container in order not to occupy space
+
 let dateContainer = document.getElementById('dateContainer')
-var slider = mapChart.chartContainer.createChild(am4core.Slider);
+let slider = mapChart.chartContainer.createChild(am4core.Slider);
 slider.start = 0.5;
 slider.valign = "bottom";
 slider.padding(0, 30, 0, 80);
@@ -81,23 +81,52 @@ slider.background.padding(0, 30, 0, 80);
 slider.marginBottom = 15;
 slider.opacity = 0;
 slider.events.on("rangechanged", function () {
-    let t = new Date().getTime();
-    updateDateNight(t + (slider.start - 0.5) * 1000 * 60 * 60 * 24 * 2 * 2);
-    console.log(t)
-    console.log(slider.start)
-    let newD = new Date(t)
-    console.log(newD)
+
+
+    // console.log(t)
+    // console.log(slider.start)
+    // let newD = new Date(t)
+    // console.log(newD)
 })
 
-let time = new Date().getTime();
+
+function buttonC() {
+    let DateV = document.getElementById('date').value;
+
+    let localTimeV = document.getElementById('hour').value;
+
+    let dateMsg = document.getElementById('messageD');
+    let timeMsg = document.getElementById('messageT');
+    
+    if (!DateV ||!localTimeV) {
+    //     console.log('invalid date')
+    //    dateMsg.style.opacity = "1";
+    //    openAlert()
+
+    }
+    
+    else {
+        // closeAlert()
+        updateDateNight();
+    }
+}
 
 
 
 
+function updateDateNight() {
+    // let myDate = new Date(); // Your timezone!
+    // let myEpoch = myDate.getTime();
+    let DateV = document.getElementById('date').value;
 
+    let localTimeV = document.getElementById('hour').value;
 
-function updateDateNight(time) {
-    var sunPosition = solarPosition(time -6300000);
+    let myDate1 = new Date(DateV + " " + localTimeV); // Your timezone!
+    let myEpoch1 = myDate1.getTime();
+    // console.log(myDate1)
+    // console.log(localTimeV)
+    // updateDateNight(myEpoch + (slider.start - 0.5) * 1000 * 60 * 60 * 24 * 2 * 2);
+    let sunPosition = solarPosition(myEpoch1);
     sun.latitude = sunPosition.latitude;
     sun.longitude = sunPosition.longitude;
     sun.deepInvalidate();
@@ -105,11 +134,11 @@ function updateDateNight(time) {
     night.multiPolygon = am4maps.getCircle(sunPosition.longitude + 180, -sunPosition.latitude, 91);
     night2.multiPolygon = am4maps.getCircle(sunPosition.longitude + 180, -sunPosition.latitude, 89);
     nightSeries.invalidate();
-    console.log(time)
+    // console.log(time)
 
 }
 
-var button = mapChart.createChild(am4core.Button);
+let button = mapChart.createChild(am4core.Button);
 button.align = "right";
 button.marginTop = 40;
 button.marginRight = 40;
@@ -158,7 +187,16 @@ function equationOfTime(centuries) {
 }
 
 function solarDeclination(centuries) {
-    return Math.asin(Math.sin(obliquityCorrection(centuries)) * Math.sin(solarApparentLongitude(centuries)));
+
+    let solarDeclination1 = Math.asin(Math.sin(obliquityCorrection(centuries)) * Math.sin(solarApparentLongitude(centuries)));
+    // let targetDiv = document.getElementById('solarDeclination');
+    // targetDiv.innerHTML = solarDeclination1.val;
+    //  document.getElementById("solarDeclination").value.innerHTML = solarDeclination1;
+    // let node = document.createTextNode('solarDeclination1')
+    // targetDiv.appendChild(node);
+
+    console.log(solarDeclination1)
+    return solarDeclination1;
 }
 
 function solarApparentLongitude(centuries) {

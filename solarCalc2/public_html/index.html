@@ -15,11 +15,11 @@ and open the template in the editor.
 </head>
 
 <body>
-    <div class = 'headingContainer'>
+    <!-- <div class='headingContainer'>
 
         <h1 class='heading'>Solar Calculator</h1>
-       
-    </div>
+
+    </div> -->
     <div class='container'>
         <div class='row'>
             <div class='LocationConatiner'>
@@ -50,13 +50,16 @@ and open the template in the editor.
                         </div>
                         <div class='row1' id='dateContainer'>
 
-                            <button class="button-30" role="button" onclick="getLocation()" >Get Location</button>
+                            <button class="button-30" role="button" onclick="getLocation()">Get Location</button>
+                            <!-- <button class="button-32" role="button" onclick="getUtcOffset()">Get UTC Offset</button>
 
+                            <div class='latLong' id='UCT'>
+                                
+                            </div> -->
                         </div>
-                            <!-- <button class="button-32" role="button" onclick="getUtcOffset()">Get UTC Offset</button> -->
 
 
-                        
+
                     </div>
                 </div>
                 <!-- k -->
@@ -111,7 +114,7 @@ and open the template in the editor.
                             <button class="button-30" role="button" onclick="buttonC()" id='btn'>Sun Posistion</button>
 
                         </div>
-                            
+
                     </div>
                 </div>
                 <!-- k -->
@@ -123,56 +126,7 @@ and open the template in the editor.
                     </div>
 
                     <div class='result'>
-                        <!-- <div class='row'>
-                            <div class='latitudeContainer'>
-                                <b>Equation of Time <br>
-                                    (minutes):</b>
-                                <div class='resultBox'></div>
-                            </div>
-                            <div class='latitudeContainer'>
-                                <b>Solar Declination <br>
-                                    (in°):</b>
-                                <div class='resultBox' id='solarDeclination'></div>
-                            </div>
 
-
-
-                        </div>
-                        <div class='row'>
-                            <div class='latitudeContainer'>
-                                <b>Solar Noon <br>
-                                    (hh:mm:ss):</b>
-                                <div class='resultBox'></div>
-                            </div>
-                            <div class='latitudeContainer'>
-                                <b>Apparent Sunrise <br>
-                                    (hh:mm):</b>
-                                <div class='resultBox'></div>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <div class='latitudeContainer'>
-                                <b>Apparent Sunset <br>
-                                    (hh:mm):</b>
-                                <div class='resultBox'></div>
-                            </div>
-                            <div class='latitudeContainer'>
-                                <b>Az/Ei <br>
-                                    (in°) at Local Time:</b>
-                                <div class='resultBox'></div>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <div class='latitudeContainer'>
-                                <b> Length of day <br>
-                                    (hh:mm:)</b>
-                                <div class='resultBox'></div>
-                            </div>
-                            <div class='latitudeContainer'>
-                                <button class="button-33" role="button">Calculate</button>
-
-                            </div>
-                        </div> -->
                         <div id="chartdiv3">
 
                         </div>
@@ -1413,7 +1367,7 @@ and open the template in the editor.
 
                     </div>
 
-                    <div class='location'>
+                    <div class='location4' id = 'panelinfo'>
                         <div class='row'>
                             <div class='latitudeContainer'>
                                 <b class='text1'>Number of Panels:</b>
@@ -1463,25 +1417,102 @@ and open the template in the editor.
 
             </div>
         </div>
+        <div class='row'>
+
+            <div class='LocationConatinerResult'>
+                <div class='wrapper'>
+                    <div class='colortab'>
+
+                        <b class='text'>Result:</b>
+
+
+                    </div>
+                    <div class='ResultC'>
+                        <div class='row4'>
+                            <div class='latitudeContainer6'>
+                                <b>Equation of Time <br>
+                                    (minutes):</b>
+                                <div class='resultBox'></div>
+                            </div>
+                            <div class='latitudeContainer6'>
+                                <b>Solar Declination <br>
+                                    (in°):</b>
+                                <div class='resultBox' id='solarDeclination'></div>
+                            </div>
 
 
 
-        <!-- g -->
-
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/geodata/continentsLow.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
 
-    <script src="DayNightMap.js"></script>
-    <script src="powerChartDaily.js"></script>
-    <script src="solyc.js"></script>
-    <script src="tempChart.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                            <div class='latitudeContainer6'>
+                                <b>Solar Noon <br>
+                                    (hh:mm:ss)<br>
+                                    :</b>
+                                <div class='resultBox'></div>
+                            </div>
+                            <div class='latitudeContainer6'>
+                                <b>Apparent Sunrise <br>
+                                    (hh:mm):</b>
+                                <div class='resultBox'></div>
+                            </div>
+
+
+                            <div class='latitudeContainer6'>
+                                <b>Apparent Sunset <br>
+                                    (hh:mm):</b>
+                                <div class='resultBox'></div>
+                            </div>
+                            <div class='latitudeContainer6'>
+                                <b>Az/Ei <br>
+                                    (in°) at Local Time:</b>
+                                <div class='resultBox'></div>
+                            </div>
+
+
+                            <div class='latitudeContainer6'>
+                                <b> Length of day <br>
+                                    (hh:mm:)<br>
+                                    :</b>
+                                <div class='resultBox'></div>
+                            </div>
+                            <!-- <div class='latitudeContainer6'>
+                                <button class="button-33" role="button">Calculate</button>
+
+                            </div> -->
+                        </div>
+                        <!-- break -->
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- g -->
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/geodata/continentsLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+
+        <script src="DayNightMap.js"></script>
+        <script src="powerChartDaily.js"></script>
+        <script src="solyc.js"></script>
+        <script src="tempChart.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+        <!-- <script src="lib/jquery-1.11.2.js"></script> -->
+        <script src="moment.js"></script>
+        <script src="sol.js"></script>
+        <script src="solycChart.js"></script>
+        <script src="uiObject.js"></script>
+        <script src="solycUI.js"></script>
+        <script src="demo.js"></script>
+
+        <link rel="stylesheet" href="common.css">
 </body>
 
 </html>

@@ -24,6 +24,9 @@ function showPosition(position) {
     long.innerHTML = position.coords.longitude;
 }
 
+// let offset1 = new Date().getTimezoneOffset();
+// console.log(offset1);
+
 function getDateTime() {
     let d = new Date();
 
@@ -34,11 +37,7 @@ function getDateTime() {
 
 
 
-function getUtcOffset() {
-    let d = new Date();
-    let n = d.getTimezoneOffset();
-    document.getElementById("UCT").innerHTML = n;
-}
+
 
 let elem1 = document.getElementById('sunC');
 
@@ -215,46 +214,50 @@ let btn = document.getElementById('btn');
 
 function ripple(e) {
 
-  // Setup
-  let posX = this.offsetLeft;
-  let posY = this.offsetTop;
-  let buttonWidth = this.offsetWidth;
-  let buttonHeight =  this.offsetHeight;
-  
-  // Add the element
-  let ripple = document.createElement('span');
-  
-  this.appendChild(ripple);
+    // Setup
+    let posX = this.offsetLeft;
+    let posY = this.offsetTop;
+    let buttonWidth = this.offsetWidth;
+    let buttonHeight = this.offsetHeight;
 
-  
- // Make it round!
-  if(buttonWidth >= buttonHeight) {
-    buttonHeight = buttonWidth;
-  } else {
-    buttonWidth = buttonHeight; 
-  }
-  
-  // Get the center of the element
-  var x = e.pageX - posX - buttonWidth / 2;
-  var y = e.pageY - posY - buttonHeight / 2;
-  
- 
-  ripple.style.width = `${buttonWidth}px`;
-  ripple.style.height = `${buttonHeight}px`;
-  ripple.style.top = `${y}px`;
-  ripple.style.left = `${x}px`;
-  
-  ripple.classList.add('rippleAnimation');
-  
-  setTimeout(() => {
-    this.removeChild(ripple);
-  }, 1000);
+    // Add the element
+    let ripple = document.createElement('span');
+
+    this.appendChild(ripple);
+
+
+    // Make it round!
+    if (buttonWidth >= buttonHeight) {
+        buttonHeight = buttonWidth;
+    } else {
+        buttonWidth = buttonHeight;
+    }
+
+    // Get the center of the element
+    var x = e.pageX - posX - buttonWidth / 2;
+    var y = e.pageY - posY - buttonHeight / 2;
+
+
+    ripple.style.width = `${buttonWidth}px`;
+    ripple.style.height = `${buttonHeight}px`;
+    ripple.style.top = `${y}px`;
+    ripple.style.left = `${x}px`;
+
+    ripple.classList.add('rippleAnimation');
+
+    setTimeout(() => {
+        this.removeChild(ripple);
+    }, 1000);
 
 }
 
 btn.addEventListener('click', ripple);
 
-
-
-
+// function getUtcOffset() {
+//     let d = new Date();
+//     let newOffset = new Date().getTimezoneOffset();
+//    let offsetTarget = document.getElementById('UTC'); 
+//     console.log(n);
+//     offsetTarget.value.innerHTML = n;
+// }
 

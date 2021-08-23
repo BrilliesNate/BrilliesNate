@@ -66,6 +66,10 @@ suncircle.fill = am4core.color("#ffba00");
 suncircle.strokeOpacity = 0;
 sun.filters.push(new am4core.BlurFilter());
 
+// let orient = function() {
+
+    
+// }
 
 let graticuleSeires = mapChart.series.push(new am4maps.GraticuleSeries());
 graticuleSeires.mapLines.template.stroke = am4core.color("#ffffff");
@@ -122,10 +126,10 @@ function updateDateNight() {
     let localTimeV = document.getElementById('hour').value;
 
     let myDate1 = new Date(DateV + " " + localTimeV); // Your timezone!
-    let myEpoch1 = myDate1.getTime();
+    let myEpoch1 = myDate1.getTime(); 
     // console.log(myDate1)
     // console.log(localTimeV)
-    // updateDateNight(myEpoch + (slider.start - 0.5) * 1000 * 60 * 60 * 24 * 2 * 2);
+    // updateDateNight(myEpoch + (slider.start - 0.5) * 1000 * 60 * 60 * 24 * 2 * 2);   
     let sunPosition = solarPosition(myEpoch1);
     sun.latitude = sunPosition.latitude;
     sun.longitude = sunPosition.longitude;
@@ -134,7 +138,7 @@ function updateDateNight() {
     night.multiPolygon = am4maps.getCircle(sunPosition.longitude + 180, -sunPosition.latitude, 91);
     night2.multiPolygon = am4maps.getCircle(sunPosition.longitude + 180, -sunPosition.latitude, 89);
     nightSeries.invalidate();
-    // console.log(time)
+    console.log(myDate1)
 
 }
 

@@ -1,111 +1,135 @@
+// am4core.ready(function() {
 
-
-   am4core.ready(function() {
-
-    // Themes begin
-        am4core.useTheme(am4themes_animated);
-        // Themes end
+//     // Themes begin
+//     am4core.useTheme(am4themes_animated);
+//     // Themes end
     
-        // Create chart instance
-        var chart = am4core.create("chartdiv2", am4charts.XYChart);
-        
-        var iterateDay = function() {
-            
-            //var day = moment(inputs.date).dayOfYear();
-            var dailyPerformanceArray = [];
-            var iterator = 0;
-            var date = new Date();
-                for (var i = 0; i < 239; i++) {
-                    
-                    //var nexthour = moment(day).add(iterator, "hours");
-                    
-                    iterator += 0.1;
-                    inputs.solIterate(iterator);
-                    dailyPerformanceArray.push({hour: moment(inputs.date).add(iterator, "hours").format("MM-DD HH:mm").toString(),irradiation: inputs.installationSize * inputs.s_module});
-                    console.log(moment(inputs.date).add(iterator, "hours").format("YYYY-MM-DD HH:mm").toString());
-                    //console.log(inputs.s_mod_am);
-                }
-            
-            
-            this.dailyPerformanceArray = dailyPerformanceArray;
-            console.log(dailyPerformanceArray);
-            
-        };
-        // Add data
+//     var chart = am4core.create("chartdiv2", am4charts.XYChart);
+//     chart.hiddenState.properties.opacity = 0;
     
-        
-        
-        var chartDaily1 = function() {
-            iterateDay();
-            series.data = dailyPerformanceArray;
-            
-        };
-        
-        var chartDaily2 = function() {
-            iterateDay();
-            series2.data = dailyPerformanceArray;
-            
-        };
-        this.chartDaily1 = chartDaily1;
-        this.chartDaily2 = chartDaily2;
-        
-        //chart.dateFormatter.dateFormat = "yyyy-MM-DD HH:mm";
-        // Create axes
+//     chart.padding(0, 0, 0, 0);
     
-        var hourAxis = chart.xAxes.push(new am4charts.DateAxis());
-        hourAxis.dataFields.value = "hour";
-        hourAxis.renderer.grid.template.location = 0;
-        hourAxis.renderer.minGridDistance = 30;
-        hourAxis.baseInterval = {
-            "timeUnit": "minute",
-            "count": 6
-        }
-        hourAxis.dateFormats.setKey("minute", "HH:mm");
-        hourAxis.title.text = "Time of Day (hours)";
-        hourAxis.title.dy = 20;
-        
+//     chart.zoomOutButton.disabled = true;
     
-        hourAxis.renderer.labels.template.adapter.add("dy", function(dy, target) {
-          if (target.dataItem && target.dataItem.index & 2 == 2) {
-            return dy + 25;
-          }
-          return dy;
-        });
+//     var data = [];
+//     var visits = 10;
+//     var i = 0;
     
-        var powerAxis = chart.yAxes.push(new am4charts.ValueAxis());
-        powerAxis.title.text = "Expected Output (kW)";
-        powerAxis.title.fontFamily = "sans-serif"
-        powerAxis.renderer.minGridDistance = 10;
+//     for (i = 0; i <= 30; i++) {
+//         visits -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+//         data.push({ date: new Date().setSeconds(i - 30), value: visits });
+//     }
     
-        // Create series
-        var series = chart.series.push(new am4charts.LineSeries());
-        var series2 = chart.series.push(new am4charts.LineSeries());
-        series2.dataFields.valueY = "irradiation";
-        series.dataFields.valueY = "irradiation";
-        series2.dataFields.dateX = "hour";
-        series.dataFields.dateX = "hour";
-        series2.name = "Orientation 2";
-        series.name = "Orientation 1";
-        chart.cursor = new am4charts.XYCursor();
-        series.strokeWidth = 3;
-        series2.strokeWidth = 3;
-        
-        var title = chart.titles.create();
-        title.text = "Power Output Thoughout the Day";
-        title.fontSize = 25;
-        title.fontFamily = "sans-serif"
-        // font-family: sans-serif;
-        title.marginBottom = 30;
-        series.tooltipText = "{dateX.formatDate('MM-dd HH:mm')}: [bold]{valueY}[/] (kW)";
-        series2.tooltipText = "{dateX.formatDate('MM-dd HH:mm')}: [bold]{valueY}[/] (kW)";
-       // series.columns.template.tooltipText = "{dateX}: [bold]{valueY}[/]";
-       // series.columns.template.fillOpacity = .8;
+//     chart.data = data;
     
-       // var columnTemplate = series.columns.template;
-       // columnTemplate.strokeWidth = 2;
-      //  columnTemplate.strokeOpacity = 1;
+//     var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+//     dateAxis.renderer.grid.template.location = 0;
+//     dateAxis.renderer.minGridDistance = 30;
+//     dateAxis.dateFormats.setKey("second", "ss");
+//     dateAxis.periodChangeDateFormats.setKey("second", "[bold]h:mm a");
+//     dateAxis.periodChangeDateFormats.setKey("minute", "[bold]h:mm a");
+//     dateAxis.periodChangeDateFormats.setKey("hour", "[bold]h:mm a");
+//     dateAxis.renderer.inside = true;
+//     dateAxis.renderer.axisFills.template.disabled = true;
+//     dateAxis.renderer.ticks.template.disabled = true;
     
-    }); 
-
-
+//     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+//     valueAxis.tooltip.disabled = true;
+//     valueAxis.interpolationDuration = 500;
+//     valueAxis.rangeChangeDuration = 500;
+//     valueAxis.renderer.inside = true;
+//     valueAxis.renderer.minLabelPosition = 0.05;
+//     valueAxis.renderer.maxLabelPosition = 0.95;
+//     valueAxis.renderer.axisFills.template.disabled = true;
+//     valueAxis.renderer.ticks.template.disabled = true;
     
+//     var series = chart.series.push(new am4charts.LineSeries());
+//     series.dataFields.dateX = "date";
+//     series.dataFields.valueY = "value";
+//     series.interpolationDuration = 500;
+//     series.defaultState.transitionDuration = 0;
+//     series.tensionX = 0.8;
+    
+//     chart.events.on("datavalidated", function () {
+//         dateAxis.zoom({ start: 1 / 15, end: 1.2 }, false, true);
+//     });
+    
+//     dateAxis.interpolationDuration = 500;
+//     dateAxis.rangeChangeDuration = 500;
+    
+//     document.addEventListener("visibilitychange", function() {
+//         if (document.hidden) {
+//             if (interval) {
+//                 clearInterval(interval);
+//             }
+//         }
+//         else {
+//             startInterval();
+//         }
+//     }, false);
+    
+//     // add data
+//     var interval;
+//     function startInterval() {
+//         interval = setInterval(function() {
+//             visits =
+//                 visits + Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 5);
+//             var lastdataItem = series.dataItems.getIndex(series.dataItems.length - 1);
+//             chart.addData(
+//                 { date: new Date(lastdataItem.dateX.getTime() + 1000), value: visits },
+//                 1
+//             );
+//         }, 1000);
+//     }
+    
+//     startInterval();
+    
+//     // all the below is optional, makes some fancy effects
+//     // gradient fill of the series
+//     series.fillOpacity = 1;
+//     var gradient = new am4core.LinearGradient();
+//     gradient.addColor(chart.colors.getIndex(0), 0.2);
+//     gradient.addColor(chart.colors.getIndex(0), 0);
+//     series.fill = gradient;
+    
+//     // this makes date axis labels to fade out
+//     dateAxis.renderer.labels.template.adapter.add("fillOpacity", function (fillOpacity, target) {
+//         var dataItem = target.dataItem;
+//         return dataItem.position;
+//     })
+    
+//     // need to set this, otherwise fillOpacity is not changed and not set
+//     dateAxis.events.on("validated", function () {
+//         am4core.iter.each(dateAxis.renderer.labels.iterator(), function (label) {
+//             label.fillOpacity = label.fillOpacity;
+//         })
+//     })
+    
+//     // this makes date axis labels which are at equal minutes to be rotated
+//     dateAxis.renderer.labels.template.adapter.add("rotation", function (rotation, target) {
+//         var dataItem = target.dataItem;
+//         if (dataItem.date && dataItem.date.getTime() == am4core.time.round(new Date(dataItem.date.getTime()), "minute").getTime()) {
+//             target.verticalCenter = "middle";
+//             target.horizontalCenter = "left";
+//             return -90;
+//         }
+//         else {
+//             target.verticalCenter = "bottom";
+//             target.horizontalCenter = "middle";
+//             return 0;
+//         }
+//     })
+    
+//     // bullet at the front of the line
+//     var bullet = series.createChild(am4charts.CircleBullet);
+//     bullet.circle.radius = 5;
+//     bullet.fillOpacity = 1;
+//     bullet.fill = chart.colors.getIndex(0);
+//     bullet.isMeasured = false;
+    
+//     series.events.on("validated", function() {
+//         bullet.moveTo(series.dataItems.last.point);
+//         bullet.validatePosition();
+//     });
+    
+//     }); 

@@ -1,0 +1,135 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 14, 2018, 11:06:55 AM
+    Author     : Matthew
+*/
+
+
+
+.inner{
+    width:500px;
+
+
+}
+.graph{
+    width:800px;
+    position: relative;
+}
+
+.heading{
+    position: relative;
+    left: 200px
+}
+
+.left{
+
+    position:relative;
+    float:left;
+    width:50%;
+
+}
+
+.right{
+    position:relative;
+    float:left;
+    width:50%;
+
+}
+
+.heightobj{
+    height:39px;
+}
+
+#wrap{
+    width:500px;
+}
+.wrapp{
+    width:531px;
+}
+#wrap2{
+    width:500px;
+}
+
+.colorHeading{
+    color:orange;
+}
+
+.inputField{
+    width:100%;
+    left:0px;
+}
+.inputField span{
+
+    width: 148px;
+
+    display: inline-block;
+    float: right;
+    text-align: left; 
+}
+.inputField input{
+    width:100px;
+}
+
+.wrapper{
+    width:50%;
+    height:850px;
+    position:absolute;
+    top: 45px;
+    left:700px
+}
+
+.orange{
+
+    width:95%;
+
+}
+
+.orange:hover{
+    outline: 5px solid orangered;
+}
+
+
+.yellow{
+
+    width:95%;
+}
+
+.yellow:hover{
+    outline: 5px solid gold;
+}
+
+#panel{
+    position: absolute;
+    left:191px;
+    top: 669px;
+    height:218px;
+}
+
+#compasRose{
+    position: absolute;
+    left:10px;
+    top: 550px ;
+    height:230px;
+    width:230px;
+
+}
+
+#tilter{
+    position: absolute;
+    left:280px;
+    top: 560px ;
+    height:400px;
+    width:250px;
+
+}
+
+#results{
+    position: absolute;
+    top:800px;
+    height: 90px;
+    width:500px;
+}

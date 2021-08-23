@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="136.07143mm"
+   height="1.5119048mm"
+   viewBox="0 0 136.07143 1.5119048"
+   version="1.1"
+   id="svg6015"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Tilt.svg">
+  <defs
+     id="defs6009" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="305.54861"
+     inkscape:cy="-95.897753"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata6012">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-53.294643,-115.94939)">
+    <rect
+       style="fill:#241c1c;fill-rule:evenodd;stroke-width:0.26458332"
+       id="rect6057"
+       width="136.07143"
+       height="1.5119048"
+       x="53.277939"
+       y="115.9661" />
+    <rect
+       style="fill:#ffcc00;fill-rule:evenodd;stroke-width:0.26458332"
+       id="yellowTilt"
+       width="136.07143"
+       height="1.5119048"
+       x="53.277931"
+       y="115.9661"
+       inkscape:label="yellowTilt" />
+    <rect
+       style="fill:#ff6600;fill-rule:evenodd;stroke-width:0.26458332"
+       id="orangeTilt"
+       width="136.07143"
+       height="1.5119048"
+       x="53.277943"
+       y="115.9661"
+       inkscape:label="orangeTilt" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3721"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,163.85268,79.852664)"><flowRegion
+         id="flowRegion3723"><rect
+           id="rect3725"
+           width="123.57143"
+           height="52.857143"
+           x="-18.571428"
+           y="89.285713" /></flowRegion><flowPara
+         id="flowPara3727">0 Deg</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.26458333,0,0,0.26458333,164.09061,79.832758)"
+       xml:space="preserve"
+       id="flowRoot3721-4"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         id="flowRegion3723-2"><rect
+           id="rect3725-4"
+           width="123.57143"
+           height="52.857143"
+           x="-18.571428"
+           y="89.285713" /></flowRegion><flowPara
+         id="flowPara3727-4">0 Deg</flowPara></flowRoot>  </g>
+</svg>

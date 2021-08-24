@@ -38,7 +38,7 @@ body{
 
 .location4{
   width:400px;
-    height: 200px;
+    height: 150px;
     
     background:white;
 
@@ -394,6 +394,7 @@ body{
 .img-overlay-wrap {
     position: relative;
     margin-top: 30px;
+    margin-bottom: 20px;
     display: inline-block; /* <= shrinks container to image size */
     transition: transform 150ms ease-in-out;
   }
@@ -413,18 +414,67 @@ body{
   }
 
   #svg5{
-      margin-left: 80px;
-      margin-top: 70px;
-      width:160px;
-      height:160px;
+      margin-left: 120px;
+      margin-top: 74px;
+      width:210px;
+      height:210px;
+      display:none;
+      
+  }
+  #svg3{
+      margin-left: 120px;
+      margin-top: 74px;
+      width:210px;
+      height:210px;
+      display:none;
+      
+  }
+  #svg0{
+      margin-left: 122px;
+      margin-top: 74px;
+      width:210px;
+      height:210px;
+      display:block;
+      
+  }
+  #svg10{
+      margin-left: 120px;
+      margin-top: 76px;
+      width:210px;
+      height:210px;
+      display:none;
+      
+  }
+  #svg15{
+      margin-left: 120px;
+      margin-top: 76px;
+      width:210px;
+      height:210px;
+      display:none;
+      
+  }
+  #svg20{
+      margin-left: 120px;
+      margin-top: 73px;
+      width:210px;
+      height:210px;
+      display:none;
+      
+  }
+  #svg25{
+      margin-left: 120px;
+      margin-top: 67px;
+      width:210px;
+      height:210px;
+      display:none;
       
   }
   #svg6{
     
-    margin-left: 50px;
-    margin-top: 100px;
-    width:300px;
-    height:300px;
+    margin-left: 125px;
+    margin-top: 150px;
+    width:200px;
+    height:200px;
     
   }
   #svg7{

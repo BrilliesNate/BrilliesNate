@@ -9,7 +9,7 @@ let solycChart = {
         new uiObject(div, {
             title: 'calculate',
             type: 'button',
-            label: 'Initialize',
+            label: 'Power',
             container: div,
             onChange: function () {
                 console.log('Calc init');
@@ -25,7 +25,7 @@ let solycChart = {
         new uiObject(div, {
             title: 'addSeries',
             type: 'button',
-            label: 'Add Series',
+            label: '',
             onChange: function () {
                 solycChart.onCalculate();
                 ch.charts.dayChart.onAddSeries(solycChart.dailyPerformanceArray);

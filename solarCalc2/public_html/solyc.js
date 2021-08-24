@@ -36,7 +36,8 @@ function getDateTime() {
 }
 
 
-
+// let g = getElementById('svg4')
+// g.display = 'none'
 
 
 let elem1 = document.getElementById('sunC');
@@ -45,9 +46,44 @@ let rangeValue1 = function () {
     let newValue1 = elem1.value;
     let target = document.querySelector('.value1');
     target.innerHTML = + newValue1 + '°';
-    let circle1 = document.getElementById("svg6");
+    // let circle1 = document.getElementById("svg6");
+    // console.log(newValue1)
+    let roof0D = document.getElementById('svg0')
+    let roof10D = document.getElementById('svg10')
+    let roof15D = document.getElementById('svg15');
+    let roof20D = document.getElementById('svg20');
+    let roof25D = document.getElementById('svg25');
 
-    circle1.style.transform = 'rotate(' + newValue1 + 'deg)';
+    if (newValue1==="0") {
+        roof0D.style.display = 'block'
+        roof10D.style.display = 'none'
+    }
+
+    if (newValue1 === "10") {
+
+        roof0D.style.display = 'none'
+        roof10D.style.display = 'block'
+        roof15D.style.display = 'none'
+
+    }
+    if (newValue1 ==="20") {
+        roof10D.style.display = 'none'
+        roof15D.style.display = 'block'
+        roof20D.style.display = 'none'
+        console.log("this is 15")
+    }
+    if (newValue1 === "30") {
+        roof15D.style.display = 'none'
+        roof20D.style.display = 'block'
+        roof25D.style.display = 'none'
+
+    }
+    if(newValue1 ==="40") {
+        roof20D.style.display = 'none'
+        roof25D.style.display = 'block'
+
+    }
+    // circle1.style.transform = 'rotate(' + newValue1 + 'deg)';
 }
 elem1.addEventListener("input", rangeValue1);
 
@@ -61,7 +97,7 @@ let rangeValue = function () {
     let newValue = elem.value;
     let target = document.querySelector('.value');
     target.innerHTML = + newValue + '°';
-    let circle = document.getElementById("svg5");
+    let circle = document.getElementById("compas");
     var compas;
     circle.style.transform = 'rotate(' + newValue + 'deg)';
 
@@ -176,8 +212,6 @@ function left() {
 // let btn = document.getElementById('btn')
 // btn.addEventListener('mouseenter',over)
 // btn.addEventListener('mouseleave',left)
-
-
 
 
 elem.addEventListener("input", rangeValue);

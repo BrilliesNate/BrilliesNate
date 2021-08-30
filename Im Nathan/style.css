@@ -1,0 +1,35 @@
+.background{
+    margin:0px;
+    text-align: center;
+
+}
+
+.heading1{
+    margin-top: 0px;
+}
+
+.sqr1{
+    background-color: #E4F9F5;
+    position: relative;
+    padding-top:100px;
+}
+
+.sqr2{
+  
+}
+.sqr3{
+ 
+}
+
+.bottomCloud{
+    position: absolute;
+    left:300px;
+    bottom:300px
+    
+}
+
+.topCloud{
+    position: absolute;
+    right:300px;
+    top:50px;
+}

@@ -1,0 +1,359 @@
+body {
+  font-family: " Cardo";
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: " Cardo-Bold";
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+  color: white;
+  /* leftt: 300px; */
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section {
+  background-color: rgb(114, 68, 68);
+  color: black;
+}
+
+.white-section {
+  top: 370px;
+  background-color: white;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+
+/* Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+
+#title {
+  background-color: white;
+  color: #fff;
+  text-align: left;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+/* Title Image */
+
+.title-image {
+  width: 100%;
+  height: 1000px;
+
+  position: absolute;
+  right: 0.1%;
+}
+.title-image1 {
+  width: 100%;
+  height: 800px;
+  display: none;
+  position: absolute;
+  right: 0.1%;
+}
+.title-image2 {
+  width: 100%;
+  height: 600px;
+
+  position: absolute;
+  right: 0.1%;
+}
+
+/* Features Section */
+
+#features {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
+
+/* Testimonial Section */
+
+#testimonials {
+  background-color: white;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing Section */
+
+#pricing {
+  padding: 100px;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CTA Section */
+
+/* Footer Section */
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
+
+.button-container-1 {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh;
+  overflow: hidden;
+  right: 260px;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  display: block;
+}
+.button-container-1 button {
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
+  background: #355C7D;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+.button-container-1 button:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+.button-container-2 {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6vh;
+  overflow: hidden;
+  right: 260px;
+  font-weight: 300;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  display: none;
+}
+.button-container-2 button {
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
+  background: #E8175D;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+}
+.button-container-2 button:hover {
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+}
+
+.mas {
+  position: absolute;
+  color: white;
+  text-align: center;
+  width: 101%;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  font-size: 11px;
+  margin-top: 17px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+/* #menuBar{
+  top:150px
+} */
+
+/* .row{
+ margin-right: 500px;
+ margin-top: 100px;
+} */
+/* #mainHeading{
+  color: indianred;
+} */
+#themeGirlyBackground {
+  position: absolute;
+  left: -2500px;
+  width: 100%;
+  height: 800px;
+  -webkit-animation: slide 1s forwards;
+
+  animation: slide 1s forwards;
+}
+@-webkit-keyframes slide {
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slide {
+  100% {
+    left: 0;
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="popupmsg.css">
+</head>
+
+<body>
+
+    <div id='overlayScreen' class='overlay'></div>
+
+    <div class="form-structor">
+        <div class="signup">
+            <h2 class="form-title" id="signup"><span style="color: black;">or</span>Sign up</h2>
+            <div class="form-holder">
+                <input id='sighnUpUserInput' type="text" class="input" placeholder="User Name" />
+
+                <input id='sighnUpPasswordInput' type="password" class="input" placeholder="Password" />
+            </div>
+            <button class="submit-btn">Sign up</button>
+        </div>
+
+        <div class="login slide-up">
+            <div class="center">
+                <h2 class="form-title" id="login"><span style="color:black">or</span>Log in</h2>
+                <div class="form-holder">
+                    <input id="UserNameLoginInput" type="text" class="input" placeholder="User Name" />
+                    <input id='passwordLoginInput' type="password" class="input" placeholder="Password" />
+                </div>
+                <button id="enterLogin" onclick="enterLogin()" class="submit-btn">Log in</button>
+
+                <div id="successContainer">
+
+
+                    <div id="success-box">
+                        <div class="dot"></div>
+                        <div class="dot two"></div>
+                        <div class="face">
+                            <div class="eye"></div>
+                            <div class="eye right"></div>
+                            <div class="mouth happy"></div>
+                        </div>
+                        <div class="shadow scale"></div>
+                        <div class="message">
+                            <h1 class="alert">Success!</h1>
+                            <p>You have successfully logged in.</p>
+                        </div>
+                        <!-- <button class="button-box">
+                            <h1 class="green">continue</h1>
+                        </button> -->
+                    </div>
+                </div>
+
+                <div id='errorContainer'>
+
+                    <div id="error-box">
+                        <div class="dot"></div>
+                        <div class="dot two"></div>
+                        <div class="face2">
+                            <div class="eye"></div>
+                            <div class="eye right"></div>
+                            <div class="mouth sad"></div>
+                        </div>
+                        <div class="shadow move"></div>
+                        <div class="message">
+                            <h1 class="alert">Error!</h1>
+                            <p>User Name or Password incorrect.
+                        </div>
+                        <!-- <button class="button-box">
+                            <h1 class="red">try again</h1>
+                        </button> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer>
+        <p>made by <a href=""> Nathan Brill</a>
+    </footer>
+
+
+    <script src="variables.js"></script>
+    <script src="login.js"></script>
+
+</body>
+
+</html>

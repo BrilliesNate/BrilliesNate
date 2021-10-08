@@ -1,0 +1,55 @@
+body {
+  background-image: url("background.jpg");
+  background-color: #cccccc;
+}
+
+#container {
+  bottom: 264px;
+  left: 127px;
+  width: 100px;
+  height: 10px;
+  /* background-color: red; */
+  position: absolute;
+  /* padding-bottom: ; */
+}
+
+.p1 {
+  width: 50px;
+  display: block;
+}
+.p2 {
+  width: 50px;
+  display: none;
+}
+.p3 {
+  width: 50px;
+  display: none;
+}
+.p4 {
+  width: 50px;
+  display: none;
+}
+.p5 {
+  width: 50px;
+  display: none;
+}
+.p6 {
+  width: 50px;
+  display: none;
+}
+
+#health {
+  width: 65px;
+  height: 5px;
+  background-color: green;
+}
+
+.greenColor {
+  color: green;
+}
+.redColor {
+  color: red;
+}
+.yellowColor {
+  color: yellow;
+}

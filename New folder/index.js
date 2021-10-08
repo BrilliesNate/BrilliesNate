@@ -186,10 +186,16 @@ let p3 = document.getElementById('pl3');
 let p4 = document.getElementById('pl4');
 let p5 = document.getElementById('pl5');
 let p6 = document.getElementById('pl6');
+let p7 = document.getElementById('pl7');
+let p8 = document.getElementById('pl8');
+let p9 = document.getElementById('pl9');
+let p10 = document.getElementById('pl10');
+let p11 = document.getElementById('pl11');
+let p12 = document.getElementById('pl12');
 
 // moveDiv("moveRight", "", "100");
 function colorChange() {
-    moveDiv("moveRight", "", "600");
+    // moveDiv("moveRight", "", "600");
     setTimeout(firstColor, 100)
 
 
@@ -200,6 +206,12 @@ function colorChange() {
     setTimeout(forthColor, 400)
     setTimeout(fifthColor, 500)
     setTimeout(sixthColor, 600)
+    setTimeout(sevenColor, 700)
+    setTimeout(eightColor, 800)
+    setTimeout(nineColor, 900)
+    setTimeout(tenColor, 1000)
+    setTimeout(elevenColor, 1100)
+    setTimeout(twelveColor, 1200)
 
 
     // setTimeout(colorChange, 600)
@@ -237,9 +249,36 @@ function sixthColor() {
     p6.style.display = "none";
     p1.style.display = "block";
 }
-
-function dis() {
-    pl1.style.display = "none";
-    pl2.style.display = "block";
+function sevenColor() {
+    console.log('7');
+    p1.style.display = "none";
+    p7.style.display = "block";
 }
+function eightColor() {
+    console.log('8');
+    p7.style.display = "none";
+    p8.style.display = "block";
+}
+function nineColor() {
+    console.log('9');
+    p8.style.display = "none";
+    p9.style.display = "block";
+}
+function tenColor() {
+    console.log('10');
+    p9.style.display = "none";
+    p10.style.display = "block";
+}
+function elevenColor() {
+    console.log('11');
+    p10.style.display = "none";
+    p11.style.display = "block";
+}
+function twelveColor() {
+    console.log('12');
+    p11.style.display = "none";
+    p12.style.display = "block";
+}
+
+
 

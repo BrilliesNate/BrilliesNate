@@ -12,6 +12,16 @@ body {
   position: absolute;
   /* padding-bottom: ; */
 }
+#bullet {
+  bottom: 245px;
+  left: 133px;
+  width: 100px;
+  height: 10px;
+  /* background-color: red; */
+  position: absolute;
+  /* padding-bottom: ; */
+  display: none;
+}
 
 .p1 {
   width: 50px;
@@ -34,6 +44,30 @@ body {
   display: none;
 }
 .p6 {
+  width: 50px;
+  display: none;
+}
+.p7 {
+  width: 50px;
+  display: none;
+}
+.p8 {
+  width: 50px;
+  display: none;
+}
+.p9 {
+  width: 50px;
+  display: none;
+}
+.p10 {
+  width: 50px;
+  display: none;
+}
+.p11 {
+  width: 50px;
+  display: none;
+}
+.p12 {
   width: 50px;
   display: none;
 }

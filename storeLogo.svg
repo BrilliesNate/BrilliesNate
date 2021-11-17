@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="46.202423mm"
+   height="45.816204mm"
+   viewBox="0 0 46.202423 45.816204"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="storeLogo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.73406285"
+     inkscape:cx="46.31756"
+     inkscape:cy="15.666233"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="3832"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5801">
+      <stop
+         style="stop-color:#3743bf;stop-opacity:1;"
+         offset="0"
+         id="stop5797" />
+      <stop
+         style="stop-color:#3743bf;stop-opacity:0;"
+         offset="1"
+         id="stop5799" />
+    </linearGradient>
+    <linearGradient
+       x1="0"
+       y1="0"
+       y2="16"
+       id="logo-a"
+       x2="16"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#4353FF"
+         offset="0%"
+         id="stop826" />
+      <stop
+         stop-color="#4353FF"
+         stop-opacity=".32"
+         offset="100%"
+         id="stop828" />
+    </linearGradient>
+    <linearGradient
+       x1="16"
+       y1="16"
+       y2="32"
+       id="logo-b"
+       x2="32"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#4353FF"
+         offset="0%"
+         id="stop831" />
+      <stop
+         stop-color="#4353FF"
+         stop-opacity=".32"
+         offset="100%"
+         id="stop833" />
+    </linearGradient>
+    <linearGradient
+       x1="0"
+       y1="0"
+       y2="1"
+       id="logo-c">
+      <stop
+         stop-color="#78F9FF"
+         stop-opacity=".24"
+         offset="0%"
+         id="stop836" />
+      <stop
+         stop-color="#43F1FF"
+         offset="55.496%"
+         id="stop838" />
+      <stop
+         stop-color="#43F1FF"
+         stop-opacity=".24"
+         offset="100%"
+         id="stop840" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#logo-c"
+       id="linearGradient874"
+       x1="0"
+       y1="20"
+       y2="32"
+       x2="12"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#logo-c"
+       id="linearGradient876"
+       x1="20"
+       y1="0"
+       y2="12"
+       x2="32"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5801"
+       id="linearGradient5803"
+       x1="5.5433655"
+       y1="-3.6955769"
+       x2="22.61948"
+       y2="-3.7592938"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.15929211,0.04778763)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(117.29254,-28.409057)">
+    <g
+       id="g19044"
+       transform="matrix(3.5913407,0,0,3.5913407,-135.19863,111.73292)">
+      <g
+         fill="none"
+         fill-rule="evenodd"
+         id="g853"
+         transform="matrix(0.26458333,0,0,0.26458333,5.1380258,-23.201325)">
+        <path
+           d="M 4,0 H 16 V 16 H 0 V 4 A 4,4 0 0 1 4,0 Z"
+           fill="url(#logo-a)"
+           id="path845"
+           style="fill:url(#logo-a)" />
+        <path
+           d="m 16,16 h 16 v 12 a 4,4 0 0 1 -4,4 H 16 Z"
+           fill="url(#logo-b)"
+           id="path847"
+           style="fill:url(#logo-b)" />
+        <path
+           d="m 11.5,20.5 h -11 v 1 h 10 v 10 h 1 z"
+           stroke="url(#logo-c)"
+           transform="matrix(-1,0,0,1,12,0)"
+           id="path849"
+           style="stroke:url(#linearGradient874)" />
+        <path
+           d="m 31.5,0.5 h -11 v 1 h 10 v 10 h 1 z"
+           stroke="url(#logo-c)"
+           transform="matrix(1,0,0,-1,0,12)"
+           id="path851"
+           style="stroke:url(#linearGradient876)" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:5.11005px;line-height:1.25;font-family:sans-serif;fill:url(#linearGradient5803);fill-opacity:1;stroke:none;stroke-width:0.127751"
+         x="4.8087521"
+         y="-10.491323"
+         id="text1495"><tspan
+           sodipodi:role="line"
+           id="tspan1493"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:url(#linearGradient5803);fill-opacity:1;stroke-width:0.127751"
+           x="4.8087521"
+           y="-10.491323">STORE</tspan></text>
+    </g>
+  </g>
+</svg>

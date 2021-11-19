@@ -89,9 +89,11 @@
             let panelinfo = document.getElementById('panelinfo');
             this.button = document.createElement('span');
             panelinfo.appendChild(this.button);
-            this.button.classList.add('solyc-uiobj-button');
+            // this.button.classList.add('solyc-uiobj-button');
             this.button.textContent = this.conf.label || '';
             this.button.onclick = this.onChangeCb.bind(this);
+            this.button.classList.add('button-30')
+            this.button.style = "padding:5px";
         },
 
         createSwitch: function () {
@@ -104,7 +106,7 @@
         },
 
         createInputText: function () {
-            let panelinfo = document.getElementById('panelinfo');
+            let panelinfo = document.getElementById('panelinfonew');
             let txt = document.createElement('input');
             let lbl = document.createElement('span');
             lbl.textContent = this.conf.label;

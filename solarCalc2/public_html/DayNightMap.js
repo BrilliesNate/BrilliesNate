@@ -203,6 +203,7 @@ function solarDeclination(centuries) {
     return solarDeclination1;
 }
 
+
 function solarApparentLongitude(centuries) {
     return solarTrueLongitude(centuries) - (0.00569 + 0.00478 * Math.sin((125.04 - 1934.136 * centuries) * am4core.math.RADIANS)) * am4core.math.RADIANS;
 }

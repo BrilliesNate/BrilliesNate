@@ -9,15 +9,15 @@
 
 ;
 (function(global, $) {
-
-
-
-    var solyc = function(latitude, longitude, timezone, date, panelAzimuth, panelElevation, installationSize) {
+    
+   
+    var solyc = function(latitude, longitude, timezone, date,  panelAzimuth , panelElevation, installationSize) {
         return new solyc.init(latitude, longitude, timezone, date, panelAzimuth, panelElevation, installationSize);
     }
 
+ 
     //creation of every new object, which is the input data for now.
-    solyc.init = function(latitude = '0.000000', longitude = '0.000000', timezone = '0', date = '01/01/2020', panelAzimuth = '0', panelElevation = '0', installationSize = '10') {
+    solyc.init = function(latitude = '0.000000', longitude = '0.000000', timezone = '0', date = '01/01/2020', panelAzimuth = '0', panelElevation, installationSize = '10') {
         var self = this;
         self.latitude = latitude;
         self.longitude = longitude;
@@ -27,7 +27,8 @@
         self.panelElevation = panelElevation;
         self.installationSize = installationSize;
     }
-
+    
+    
     //prototype that holds functions. Add solar calculations here.
     solyc.prototype = {
 
@@ -62,14 +63,23 @@
         },
 
         setPanelAzimuth: function(panelAz) {
-
+            let newValue = elem.value;
+            panelAz = newValue;
+            
             this.panelAzimuth = panelAz;
+            console.log(newValue+ "this is the rotation");
+            console.log(panelAz + "this is the rotation old");
             return this;
         },
 
         setPanelElevation: function(panelEl) {
 
+            let newValue1 = elem1.value;
+            // newValue1 = panelEl;
+            panelEl = newValue1;
             this.panelElevation = panelEl;
+            console.log( "trying to console this" + panelEl);
+            console.log(newValue1+"***************");
             return this;
         },
 

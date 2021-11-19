@@ -9,15 +9,59 @@ let solycChart = {
         new uiObject(div, {
             title: 'calculate',
             type: 'button',
-            label: 'Power',
+            label: 'Initialize',
             container: div,
             onChange: function () {
+
+
                 console.log('Calc init');
                 solycChart.onCalculate();
                 solycChart.init();
                 console.log('breeeeak');
-                
+
+                ch.charts.yearChart.totalYieldWrapper.appendChild(ch.charts.yearChart.totalYieldDiv);
+                ch.charts.yearChart.totalYieldWrapper.appendChild(ch.charts.yearChart.totalMonthlyYieldDiv);
+                ch.charts.yearChart.totalYieldWrapper.appendChild(ch.charts.yearChart.totalDailyYieldDiv);
+
+                ch.charts.yearChart.totalYieldWrapper.id = "totalYieldWrapper";
+
+                let yearlyText = document.getElementById('yearlyText')
+                let monthlyText = document.getElementById('monthlyText')
+                let dailyText = document.getElementById('dailyText')
+
+                yearlyText.textContent = solycChart.totalYield.toFixed(0) + "\nkW";
+                monthlyText.textContent = (solycChart.totalYield / 12).toFixed(0) + "\nkW";
+                dailyText.textContent = (solycChart.totalYield / 365).toFixed(0) + "\nkW";
+
+                let dailyRands = document.getElementById("rand");
+                let monthlyRands = document.getElementById("randMonth");
+                let yearlyRands = document.getElementById("randYear");
+
+                yearlyRands.textContent = (solycChart.totalYield * 2.6).toFixed(1)
+                monthlyRands.textContent = ((solycChart.totalYield / 12) *2.6).toFixed(1)
+                dailyRands.textContent = ((solycChart.totalYield / 365) *2.6).toFixed(1)
+
+
+                // ch.charts.yearChart.totalMonthlyYieldDiv.textContent = "Total Month yield: " + (solycChart.totalYield / 12).toFixed(0);
+                // ch.charts.yearChart.totalDailyYieldDiv.textContent = "Total Day yield: " + (solycChart.totalYield / 365).toFixed(0);
+                ch.charts.yearChart.totalYieldDiv.id = "totalYieldOutput";
+                ch.charts.yearChart.totalMonthlyYieldDiv.id = "totalMonthlyYieldOutput";
+                ch.charts.yearChart.totalDailyYieldDiv.id = "totalYearYieldOutput";
+
+                ch.charts.yearChart.totalYieldDiv.classList.add('card');
+                ch.charts.yearChart.totalMonthlyYieldDiv.classList.add('card');
+                ch.charts.yearChart.totalDailyYieldDiv.classList.add('card');
+
             },
+        })
+    },
+    solarArrSize: function (div) {
+        new uiObject(div, {
+            title: 'instSizeInputText',
+            type: 'inputText',
+            label: 'Installation Size: kW ',
+            default: '1',
+            id: 'installationSize',
         })
     },
 
@@ -25,7 +69,7 @@ let solycChart = {
         new uiObject(div, {
             title: 'addSeries',
             type: 'button',
-            label: '',
+            label: 'Add Series',
             onChange: function () {
                 solycChart.onCalculate();
                 ch.charts.dayChart.onAddSeries(solycChart.dailyPerformanceArray);
@@ -38,17 +82,18 @@ let solycChart = {
         new uiObject(div, {
             title: 'latInputText',
             type: 'inputText',
-            label: 'Latitude:',
+            label: '',
             default: '-20.000000',
             id: 'latitude',
         })
     },
 
+
     longituteTextInput: function (div) {
         new uiObject(div, {
             title: 'longInputTExt',
             type: 'inputText',
-            label: 'Longitude:',
+            label: '',
             default: '20.000000',
             id: 'longitude',
         })
@@ -58,26 +103,18 @@ let solycChart = {
         new uiObject(div, {
             title: 'tzInputText',
             type: 'inputText',
-            label: 'Time Zone:',
+            label: '',
             default: '2',
             id: 'timeZone',
         })
     },
 
-    solarArrSize: function (div) {
-        new uiObject(div, {
-            title: 'instSizeInputText',
-            type: 'inputText',
-            label: 'Installation Size: ',
-            default: '1',
-            id: 'installationSize',
-        })
-    },
+
 
     panelTilt: function (div) {
         new uiObject(div, {
             type: 'inputText',
-            label: 'Panel Tilt: ',
+            label: '',
             default: '0',
             id: 'panelElevation',
         })
@@ -86,7 +123,7 @@ let solycChart = {
     rotation: function (div) {
         new uiObject(div, {
             type: 'inputText',
-            label: 'Panel Rotation: ',
+            label: '',
             default: '0',
             id: 'panelAzimuth',
         })
@@ -125,10 +162,10 @@ let solycChart = {
 
         //place the UI components
         solycChart.datePicker(dailyData1);
+        solycChart.solarArrSize(dailyData1);
         solycChart.latitudeTextInput(dailyData1);
         solycChart.longituteTextInput(dailyData1);
         solycChart.timeZone(dailyData1);
-        solycChart.solarArrSize(dailyData1);
         solycChart.panelTilt(dailyData2);
         solycChart.rotation(dailyData2);
         solycChart.calcButton(buttonsDiv);
@@ -275,7 +312,7 @@ let solycChart = {
 
 
         let yearChart = function (div) {
-           // solycChart.onCalculateYearly();
+            // solycChart.onCalculateYearly();
             ch.createChart(
 
                 div,
@@ -317,7 +354,7 @@ let solycChart = {
 
             var dailyEnergy = 0;
             var iterator = 0;
-            
+
             for (var i = 0; i < 240; i++) {
 
                 iterator += 0.1;
@@ -343,4 +380,14 @@ let solycChart = {
 
 solycChart.onLoad();
 
+// let elem1 = document.getElementById('sunC');
+// let elem1 = document.getElementById('sunC');
+// let newValue1 = elem1.value;
+// console.log("new value" + newValue1);
 
+// panelAzimuth.value = newValue1
+
+
+
+// newValue1 = panelAzimuth;
+// console.log(panelAzimuth.value);

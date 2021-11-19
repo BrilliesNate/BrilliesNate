@@ -23,6 +23,16 @@
         this.data = data;
         this.type = type;
         this.initChart();
+
+        // this.totalYieldWrapper = document.createElement('div');
+
+        let yieldOutput = document.getElementById("chartdiv3");
+        this.totalYieldWrapper = document.createElement('div');
+
+        yieldOutput.appendChild(this.totalYieldWrapper)
+        this.totalYieldDiv = document.createElement('div');
+        this.totalMonthlyYieldDiv = document.createElement('div');
+        this.totalDailyYieldDiv = document.createElement('div');
         ch.charts[name] = this.chart;
     }
 
@@ -30,10 +40,16 @@
 
         initChart: function () {
             console.log('initChart');
+
             let chartDivInit = document.getElementById('chartdiv2')
             let chartdiv = document.createElement('div'); //create chart div
             chartDivInit.appendChild(chartdiv);
             chartdiv.classList.add('solyc-chart-chartContainer');
+
+           
+
+
+
 
             let chartType = 'XYChart';
             this.defaultConfig.data = this.data;
@@ -67,7 +83,7 @@
 
             var series = this.chart.series.push(new am4charts.LineSeries());
             series.strokeWidth = 4;
-            
+
             switch (this.type) {
                 case 'day':
                     series.data = newData;
@@ -82,8 +98,8 @@
                     series.tooltipText = "{dateX}: [bold]{valueY.formatNumber('###.00')}[/] (kWh)";
                     break;
             }
-               
-            
+
+
 
             console.log('Series Added');
         },

@@ -8,12 +8,17 @@
     Author     : Nathan Brill
 */
 
+// let output = document.getElementById('panelElevation');
+// console.log(output)
+// console.log(setPanelAzimuth($('#panelAzimuth').val()))
+
 let lat = document.getElementById("lat");
 let long = document.getElementById('long')
 
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
+        console.log(position.coords.longitude);
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
@@ -35,17 +40,26 @@ function getDateTime() {
     document.getElementById("seconds").innerHTML = d.getSeconds();
 }
 
-
 // let g = getElementById('svg4')
 // g.display = 'none'
 
+// let installSize = document.getElementById('installationSize').value;
+// console.log(installSize);
+// installSize.value.innerHTML = newValue1;
 
 let elem1 = document.getElementById('sunC');
 
 let rangeValue1 = function () {
     let newValue1 = elem1.value;
+    installSize = newValue1;
+    // console.log(installSize);
     let target = document.querySelector('.value1');
     target.innerHTML = + newValue1 + '°';
+    // console.log(newValue1);
+    // let target2 = document.querySelector('.panelElevation');
+    // target2 =  newValue1 ;
+    // console.log(panelAzimuth.value);
+    // console.log(newValue1)
     // let circle1 = document.getElementById("svg6");
     // console.log(newValue1)
     let roof0D = document.getElementById('svg0')
@@ -54,19 +68,20 @@ let rangeValue1 = function () {
     let roof20D = document.getElementById('svg20');
     let roof25D = document.getElementById('svg25');
 
-    if (newValue1==="0") {
+
+
+
+
+    if (newValue1 === "0") {
         roof0D.style.display = 'block'
         roof10D.style.display = 'none'
     }
-
     if (newValue1 === "10") {
-
         roof0D.style.display = 'none'
         roof10D.style.display = 'block'
         roof15D.style.display = 'none'
-
     }
-    if (newValue1 ==="20") {
+    if (newValue1 === "20") {
         roof10D.style.display = 'none'
         roof15D.style.display = 'block'
         roof20D.style.display = 'none'
@@ -76,20 +91,14 @@ let rangeValue1 = function () {
         roof15D.style.display = 'none'
         roof20D.style.display = 'block'
         roof25D.style.display = 'none'
-
     }
-    if(newValue1 ==="40") {
+    if (newValue1 === "40") {
         roof20D.style.display = 'none'
         roof25D.style.display = 'block'
-
     }
     // circle1.style.transform = 'rotate(' + newValue1 + 'deg)';
 }
 elem1.addEventListener("input", rangeValue1);
-
-
-
-
 
 let elem = document.querySelector('input[type="range"]');
 
@@ -100,8 +109,7 @@ let rangeValue = function () {
     let circle = document.getElementById("compas");
     var compas;
     circle.style.transform = 'rotate(' + newValue + 'deg)';
-
-
+    // console.log(newValue);
     if ((newValue >= 0 && newValue <= 11) || (newValue >= 349 && newValue <= 360)) {
         compas = "N";
         target.innerHTML = compas + newValue + '°';
@@ -172,13 +180,9 @@ let rangeValue = function () {
         target.innerHTML = compas + newValue + '°';
     }
 
-
-
 }
 
 // Make a weather API request
-
-
 
 // mouse over function.
 function over() {
@@ -244,48 +248,48 @@ $(document).keydown(function (e) {
     if (e.keyCode == 67) { openAlert(); } // C is for click?
 });
 
-let btn = document.getElementById('btn');
+// let btn = document.getElementById('btn');
 
-function ripple(e) {
+// function ripple(e) {
 
-    // Setup
-    let posX = this.offsetLeft;
-    let posY = this.offsetTop;
-    let buttonWidth = this.offsetWidth;
-    let buttonHeight = this.offsetHeight;
+//     // Setup
+//     let posX = this.offsetLeft;
+//     let posY = this.offsetTop;
+//     let buttonWidth = this.offsetWidth;
+//     let buttonHeight = this.offsetHeight;
 
-    // Add the element
-    let ripple = document.createElement('span');
+//     // Add the element
+//     let ripple = document.createElement('span');
 
-    this.appendChild(ripple);
-
-
-    // Make it round!
-    if (buttonWidth >= buttonHeight) {
-        buttonHeight = buttonWidth;
-    } else {
-        buttonWidth = buttonHeight;
-    }
-
-    // Get the center of the element
-    var x = e.pageX - posX - buttonWidth / 2;
-    var y = e.pageY - posY - buttonHeight / 2;
+//     this.appendChild(ripple);
 
 
-    ripple.style.width = `${buttonWidth}px`;
-    ripple.style.height = `${buttonHeight}px`;
-    ripple.style.top = `${y}px`;
-    ripple.style.left = `${x}px`;
+//     // Make it round!
+//     if (buttonWidth >= buttonHeight) {
+//         buttonHeight = buttonWidth;
+//     } else {
+//         buttonWidth = buttonHeight;
+//     }
 
-    ripple.classList.add('rippleAnimation');
+//     // Get the center of the element
+//     var x = e.pageX - posX - buttonWidth / 2;
+//     var y = e.pageY - posY - buttonHeight / 2;
 
-    setTimeout(() => {
-        this.removeChild(ripple);
-    }, 1000);
 
-}
+//     ripple.style.width = `${buttonWidth}px`;
+//     ripple.style.height = `${buttonHeight}px`;
+//     ripple.style.top = `${y}px`;
+//     ripple.style.left = `${x}px`;
 
-btn.addEventListener('click', ripple);
+//     ripple.classList.add('rippleAnimation');
+
+//     setTimeout(() => {
+//         this.removeChild(ripple);
+//     }, 1000);
+
+// }
+
+// btn.addEventListener('click', ripple);
 
 // function getUtcOffset() {
 //     let d = new Date();

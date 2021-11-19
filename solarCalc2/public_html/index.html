@@ -10,8 +10,9 @@ and open the template in the editor.
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Calculator</title>
     <link rel="stylesheet" href="Solyc.css">
-
+    <link rel="icon" href="C:\Users\user pc\Documents\NetBeansProjects\solarCalc2\SolarToolLogo.png">
 </head>
 
 <body>
@@ -111,7 +112,7 @@ and open the template in the editor.
                         </div>
                         <div class='row1' id='dateContainer'>
 
-                            <button class="button-30" role="button" onclick="buttonC()" id='btn'>Sun Posistion</button>
+                            <button class="button-30" role="button" onclick="buttonC()" >Sun Position</button>
 
                         </div>
 
@@ -121,7 +122,7 @@ and open the template in the editor.
                 <div class='wrapper'>
                     <div class='colortab'>
 
-                        <b class="text">temperature</b>
+                        <b class="text">Total Yield</b>
 
                     </div>
 
@@ -129,8 +130,59 @@ and open the template in the editor.
 
                         <div id="chartdiv3">
 
+                            <div class="frame">
+                                <div>
+                                    <div class="headline">
+                                     
+                                    </div>
+                                    <div class="circle-big">
+                                        <div>Yearly</div>
+                                        <div class="text" id="yearlyText">
+                                            --,--<div class="small">kW</div>
+                                        </div>
+                                        <svg>
+                                            <circle class="bg" cx="57" cy="57" r="52"></circle>
+                                            <circle class="progress" cx="57" cy="57" r="52"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="circles-small">
+                                        <div class="circle-small">
+                                            <div>Monthly</div>
+                                            <div class="text" id='monthlyText'>--,--<br /><span class="small">kW</span></div>
+                                            <svg>
+                                                <circle class="bg" cx="40" cy="40" r="37"></circle>
+                                                <circle class="progress one" cx="40" cy="40" r="37"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="circle-small">
+                                            <div>Daily</div>
+                                            <div class="text" id="dailyText">--,--<br /><span class="small">kW</span>
+                                            </div>
+                                            <svg>
+                                                <circle class="bg" cx="40" cy="40" r="37"></circle>
+                                                <circle class="progress two" cx="40" cy="40" r="37"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <h1> enter your pic here</h1> -->
+                            <!-- <img src="C:\Users\user pc\Documents\NetBeansProjects\solarCalc2\pngwing.com (6).png" alt="Girl in a jacket" width="400px"> -->
                         </div>
-                        <b class="text2">Above 25°C your panel efficiency drops 0.5% per °C</b>
+                        <!-- <b class="text2">Above 25°C your panel efficiency drops 0.5% per °C</b> -->
+
+                        <div style=" height: 150px;">
+                            <div class="text" id="rand">
+                               Daily Financial yield<div class="small">---.-</div>
+                            </div>
+                            <div class="text" id="randMonth">
+                                Financial yield this month<div class="small">R---.-</div>
+                            </div>
+                            <div class="text" id="randYear">
+                                Financial yield this year<div class="small">R---.-</div>
+                            </div>
+
+                        </div>
                         <!-- g -->
                     </div>
                 </div>
@@ -151,7 +203,7 @@ and open the template in the editor.
 
                     </div>
 
-                    <div class='location'>
+                    <div class='location' id='panelinfonew'>
                         <div class='row'>
                             <div class='latitudeContainer'>
                                 <b class='text1'>Panel Orientation:</b>
@@ -204,7 +256,8 @@ and open the template in the editor.
                     <div class='img-overlay-wrap'>
 
 
-                        <img src='C:\Users\user pc\Desktop\bitmap.png' width="425mm" height="425mm" id='compas'>
+                        <img src='C:\Users\user pc\Documents\NetBeansProjects\solarCalc2\bitmap.png' width="425mm"
+                            height="425mm" id='compas'>
 
 
                         <svg width="88.590439mm" height="67.405945mm" viewBox="0 0 88.590439 67.405946" version="1.1"
@@ -6924,33 +6977,18 @@ and open the template in the editor.
                 <div class="wrapper">
                     <div class="colortab">
 
-                        <b class="text">Solar Panel Info:</b>
+                        <b class="text">Calculate</b>
 
                     </div>
 
                     <div class='location4' id='panelinfo'>
                         <div class='row'>
                             <div class='latitudeContainer'>
-                                <b class='text1'>Number of Panels:</b>
-                                <div class='panelTiltBox' id='lat'>
-                                    <input type="range" class='NumberOfPanelSlider' min='0' max='500' value='0'>
-                                </div>
-                                <div class='value2'>0
-                                    <!-- <p> <span id="long"></span></p> -->
-                                    <!-- <input type="range" class='inputBox' min='0' max='360' value='0'id = 'panelOriantaion'> -->
-                                </div>
-                            </div>
-                            <div class='latitudeContainer'>
-                                <b class='text1'>Panel Power:</b>
-                                <div class='panelTiltBox' id='lat'>
-                                    <input type="range" class='PowerPanelSlider' min='0' max='500' value='0' id='sunC'>
-                                </div>
-                                <div class='value3'>0
-                                    <!-- <p> <span id="long"></span></p> -->
-                                    <!-- <input type="range" class='inputBox' min='0' max='360' value='0'id = 'panelOriantaion'> -->
-                                </div>
+                                <!-- <b class='text1'>initialize</b> -->
+
 
                             </div>
+
 
                             <!-- <div class='LongitudeContainer'>
             <b>Panel Orientation:</b>
@@ -6978,80 +7016,9 @@ and open the template in the editor.
 
             </div>
         </div>
-        <div class='row'>
-
-            <div class='LocationConatinerResult'>
-                <div class='wrapper'>
-                    <div class='colortab'>
-
-                        <b class='text'>Result:</b>
+      
 
 
-                    </div>
-                    <div class='ResultC'>
-                        <div class='row4'>
-                            <div class='latitudeContainer6'>
-                                <b>Equation of Time <br>
-                                    (minutes):</b>
-                                <div class='resultBox'></div>
-                            </div>
-                            <div class='latitudeContainer6'>
-                                <b>Solar Declination <br>
-                                    (in°):</b>
-                                <div class='resultBox' id='solarDeclination'></div>
-                            </div>
-
-
-
-
-
-                            <div class='latitudeContainer6'>
-                                <b>Solar Noon <br>
-                                    (hh:mm:ss)<br>
-                                    :</b>
-                                <div class='resultBox'></div>
-                            </div>
-                            <div class='latitudeContainer6'>
-                                <b>Apparent Sunrise <br>
-                                    (hh:mm):</b>
-                                <div class='resultBox'></div>
-                            </div>
-
-
-                            <div class='latitudeContainer6'>
-                                <b>Apparent Sunset <br>
-                                    (hh:mm):</b>
-                                <div class='resultBox'></div>
-                            </div>
-                            <div class='latitudeContainer6'>
-                                <b>Az/Ei <br>
-                                    (in°) at Local Time:</b>
-                                <div class='resultBox'></div>
-                            </div>
-
-
-                            <div class='latitudeContainer6'>
-                                <b> Length of day <br>
-                                    (hh:mm:)<br>
-                                    :</b>
-                                <div class='resultBox'></div>
-                            </div>
-                            <!-- <div class='latitudeContainer6'>
-                                <button class="button-33" role="button">Calculate</button>
-
-                            </div> -->
-                        </div>
-                        <!-- break -->
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <!-- g -->
-
-        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
         <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
@@ -7063,7 +7030,7 @@ and open the template in the editor.
         <script src="DayNightMap.js"></script>
         <script src="powerChartDaily.js"></script>
         <script src="solyc.js"></script>
-        <script src="tempChart.js"></script>
+        <!-- <script src="tempChart.js"></script> -->
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
         <!-- <script src="lib/jquery-1.11.2.js"></script> -->
         <script src="moment.js"></script>

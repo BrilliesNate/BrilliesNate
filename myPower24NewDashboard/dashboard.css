@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.batchartWrapper {
+  /* background: blue; */
+  position: absolute;
+  bottom: 67px;
+  height: 35px;
+  width: 344px;
+
+
+  
+}
+.LoadChartWrapper {
+
+  right: 15px;
+    /* background: blue; */
+    position: absolute;
+    /* bottom: 382px; */
+    height: 35px;
+    width: 344px;
+}
+.pVChartWrapper {
+
+    top: 191px;
+    /* right: 15px; */
+    /* background: blue; */
+    position: absolute;
+    /* bottom: 675px; */
+    height: 35px;
+    width: 344px;
+}
+
+
+#chartdiv {
+  position: absolute;
+  height: 141px;
+  width: 383px;
+  bottom: -14px;
+  right: -23px;
+}
+#chartdiv2 {
+    position: absolute;
+    height: 119px;
+    width: 374px;
+    bottom: -93px;
+    right: -23px;
+}
+#chartdiv3 {
+    position: absolute;
+    height: 119px;
+    width: 407px;
+    bottom: -53px;
+    right: -50px;
+}
+
+
+
+/* .num::after {
+    font: 800 40px system-ui;
+    content: counter(count);
+    animation: counter 5s linear infinite alternate;
+    counter-reset: count 0;
+  }
+  
+  @keyframes counter {
+    0% {
+      counter-increment: count 0;
+    }
+    10% {
+      counter-increment: count 1;
+    }
+    20% {
+      counter-increment: count 2;
+    }
+    30% {
+      counter-increment: count 3;
+    } */
+   
+   
+  
+  
+   
+  
+  
+  
+
+
+

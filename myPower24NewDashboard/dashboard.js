@@ -1026,32 +1026,39 @@ document.getElementById("currentIcon").addEventListener("mouseout", pvCurrentIco
 
 document.getElementById("dashboardThemIcon").addEventListener("mouseover", pvCardTheme);
 document.getElementById("dashboardThemIcon").addEventListener("mouseout", pvCardThemeOut);
-
+let dashboardThemIconBtn = document.getElementById("dashboardThemIcon");
 function pvCardTheme() {
 document.getElementById("pvCardSVG").style.display = "none"
 document.getElementById("pvCardDasboardThemeImg").style.display = "block"
+dashboardThemIconBtn.style.background = "#f1f1ef"
 }
 function pvCardThemeOut() {
 document.getElementById("pvCardSVG").style.display = "block"
 document.getElementById("pvCardDasboardThemeImg").style.display = "none"
+dashboardThemIconBtn.style.background =  "#E2E2DE";
 }
 
 
 let pvEdit = document.getElementById("cardEditWrapper")
 let screenEdit = document.getElementById("screen")
  
+let graphIconBtn = document.getElementById("graphIcon");
+let currentIconBtn = document.getElementById("currentIcon");
+
 
 function myFunction() {
   pvEdit.style.display = "block";
   pvEdit.style.display = "flex";
   screenEdit.style.display = "flex";
   screenEdit.style.display = "block";
+  
   // console.log("PV Clicked.")
 }
 let graphimg =  document.getElementById("pvGraphImg")
 // let graphBtn = document.getElementById("graphIcon")
 let currentImg = document.getElementById("currentVoltageImg")
 function pvGraphIcon() {
+  graphIconBtn.style.background = "#f1f1ef"
   // graphBtn.style.width = "60px"
   // graphBtn.style.height = "60px"
   graphimg.style.opacity = "1";
@@ -1060,6 +1067,8 @@ function pvGraphIcon() {
   // document.getElementById("pvGraphImg").style.height = "100px";
 }
 function pvGraphIconOut() {
+  graphIconBtn.style.background =  "#E2E2DE";
+
   graphimg.style.opacity = "0";
   graphimg.style.transition = "all 0.5s";
   // document.getElementById("pvGraphImg").style.display = "none";
@@ -1068,10 +1077,12 @@ function pvGraphIconOut() {
 function pvCurrentIcon() {
   currentImg.style.opacity = "1";
   currentImg.style.transition = "all 0.5s";
+  currentIconBtn.style.background = "#f1f1ef"
 }
 function pvCurrentIconOut() {
   currentImg.style.opacity = "0";
   currentImg.style.transition = "all 0.5s";
+  currentIconBtn.style.background =  "#E2E2DE";
 }
 
 

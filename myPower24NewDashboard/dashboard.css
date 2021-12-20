@@ -11,54 +11,59 @@ body {
   bottom: 67px;
   height: 35px;
   width: 344px;
-
-
-  
 }
 .LoadChartWrapper {
-
+  right: 284px;
+  /* background: blue; */
+  position: absolute;
+  bottom: 393px;
+  height: 35px;
+  width: 344px;
+}
+.pvWrapper {
+  top: 191px;
+  /* right: 15px; */
+  /* background: blue; */
+  position: absolute;
+  /* bottom: 675px; */
+  height: 35px;
+  width: 344px;
+}
+.cardWrapper {
+  top: 14px;
   right: 15px;
-    /* background: blue; */
-    position: absolute;
-    /* bottom: 382px; */
-    height: 35px;
-    width: 344px;
+  /* background: blue; */
+  position: absolute;
+  /* bottom: 675px; */
+  height: 360px;
+  width: 321px;
 }
-.pVChartWrapper {
-
-    top: 191px;
-    /* right: 15px; */
-    /* background: blue; */
-    position: absolute;
-    /* bottom: 675px; */
-    height: 35px;
-    width: 344px;
-}
-
 
 #chartdiv {
   position: absolute;
-  height: 141px;
-  width: 383px;
-  bottom: -14px;
-  right: -23px;
+  height: 100px;
+  width: 459px;
+  bottom: 90px;
+  right: -74px;
 }
 #chartdiv2 {
-    position: absolute;
-    height: 119px;
-    width: 374px;
-    bottom: -93px;
-    right: -23px;
+  position: absolute;
+  height: 119px;
+  width: 438px;
+  bottom: -6px;
+  right: -272px;
 }
 #chartdiv3 {
-    position: absolute;
-    height: 119px;
-    width: 407px;
-    bottom: -53px;
-    right: -50px;
+  position: absolute;
+  height: 100px;
+  width: 459px;
+  bottom: -115px;
+  right: -74px;
 }
 
-
+.svgWrapper {
+  margin-top: 127px;
+}
 
 /* .num::after {
     font: 800 40px system-ui;
@@ -80,14 +85,192 @@ body {
     30% {
       counter-increment: count 3;
     } */
-   
-   
-  
-  
-   
-  
-  
-  
 
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 
+/* body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+} */
+
+p {
+  margin: 0.2rem;
+}
+
+/* svg {
+  width: 80vw;
+} */
+
+.range-container {
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.range {
+  direction: rtl;
+}
+
+/* .squiggle {
+  --stroke-dashoffset: 420;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+} */
+
+#path13405 {
+  --stroke-dashoffset: 420;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+#path13405-3 {
+  --stroke-dashoffset: 420;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+#path13405-1 {
+  --stroke-dashoffset: 420;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+#path13405-8 {
+  --stroke-dashoffset: 420;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+
+#cardEditWrapper {
+  background: white;
+  position: absolute;
+  /* bottom: 675px; */
+  height: 600px;
+  width: 600px;
+  border-radius: 32px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  /* opacity: 1; */
+  display: none;
+}
+
+#screen{
+  background: grey;
+  position: absolute;
+  /* bottom: 675px; */
+  height: 118%;
+  width: 100%;
+  /* border-radius: 32px; */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  opacity: 0.3;
+  transition: all 5s;
+}
+#graphIcon {
+  width: 72px;
+    height: 72px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.saveBtn {
+  width: 52px;
+    height: 52px;
+    /* box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px; */
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    background-color: white;
+    margin: 14px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1px;
+    /* right: 51px; */
+    position: absolute;
+}
+#currentIcon {
+  width: 72px;
+    height: 72px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dashboardThemIcon {
+  width: 72px;
+    height: 72px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.graphIconImg{
+  width: 60px;
+}
+.dashThemIcon{
+  width: 60px;
+}
+.saveIcon{
+  width: 30px;
+}
+.currentIconImg{
+  width: 51px;
+}
+
+#pvGraphImg {
+  position: absolute;
+    top: 315px;
+    right: 76px;
+    width: 368px;
+  opacity: 0;
+}
+#currentVoltageImg {
+  position: absolute;
+  top: 328px;
+    right: 85px;
+  /* display: none; */
+  opacity: 0;
+}
+.iconMenu {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.editPvCardWrapper {
+  margin-left: 80px;
+}
+#pvCardSVG{
+  display: block;
+}
+
+#pvCardDasboardThemeImg{
+  display: none;
+}
+
+.sideMenu{
+  border-radius: 28px;
+    left: 0px;
+    height: 100%;
+    width: 98px;
+    background-color: #E2E2DE;
+    position: absolute;
+}
 

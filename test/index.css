@@ -1,0 +1,52 @@
+body{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#pvChart{
+  right: 670px;
+  top: 163px;
+  position: absolute;
+  width: 589px;
+  height: 130px;
+  /* background: red; */
+}
+#batChart{
+  right: 670px;
+  bottom: 130px;
+  position: absolute;
+  width: 589px;
+  height: 130px;
+  /* background: red; */
+}
+#loadChart{
+  right: 146px;
+    bottom: 460px;
+    position: absolute;
+    width: 589px;
+    height: 130px;
+  /* background: red; */
+}
+
+#pvCap {
+  --stroke-dashoffset: 420;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+#batCapLine {
+  --stroke-dashoffset: 420;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+#loadCapLine {
+  --stroke-dashoffset: 420;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+#gridCapLine {
+  --stroke-dashoffset: 449.5;
+  stroke-dasharray: 450;
+  stroke-dashoffset: var(--stroke-dashoffset);
+}

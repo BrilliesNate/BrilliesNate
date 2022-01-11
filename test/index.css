@@ -7,23 +7,26 @@ body{
 
 #pvChart{
   right: 670px;
-  top: 163px;
+  top: 232px;
   position: absolute;
   width: 589px;
   height: 130px;
   /* background: red; */
+  /* display: none; */
 }
 #batChart{
+  /* display: none; */
   right: 670px;
-  bottom: 130px;
+  bottom: 63px;
   position: absolute;
   width: 589px;
   height: 130px;
   /* background: red; */
 }
 #loadChart{
-  right: 146px;
-    bottom: 460px;
+  /* display: none; */
+  right: 156px;
+    bottom: 393px;
     position: absolute;
     width: 589px;
     height: 130px;
@@ -49,4 +52,134 @@ body{
   --stroke-dashoffset: 449.5;
   stroke-dasharray: 450;
   stroke-dashoffset: var(--stroke-dashoffset);
+}
+
+#cloudyIcon1{
+  display: none;
+}
+
+#RainyIcon1{
+  display: none;
+}
+#g45969{
+  display: none;
+}
+
+#screen{
+  
+  background: grey;
+  position: absolute;
+  /* bottom: 675px; */
+  height: 118%;
+  width: 100%;
+  /* border-radius: 32px; */
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  opacity: 0.3;
+  transition: all 5s;
+}
+
+#cardEditWrapper {
+  /* border-style: groove; */
+  background: white;
+  position: absolute;
+  /* bottom: 675px; */
+  height: 600px;
+  width: 800px;
+  border-radius: 32px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  /* opacity: 1; */
+  display: none;
+}
+
+#graphIcon {
+  width: 72px;
+    height: 72px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.saveBtn {
+  width: 52px;
+    height: 52px;
+    /* box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px; */
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    background-color: white;
+    margin: 14px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 1px;
+    /* right: 51px; */
+    position: absolute;
+}
+#currentIcon {
+  width: 72px;
+    height: 72px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dashboardThemIcon {
+  width: 72px;
+    height: 72px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 10px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconMenu {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.editPvCardWrapper {
+  margin-left: 80px;
+}
+.sideMenu{
+  border-radius: 28px;
+    left: 0px;
+    height: 100%;
+    width: 98px;
+    background-color: #E2E2DE;
+    position: absolute;
+}
+#pvGraphImg {
+  position: absolute;
+    top: 315px;
+    right: 76px;
+    width: 368px;
+  opacity: 0;
+}
+
+#quickVeiwSvg{
+  display: none;
+}
+/* #pvCardSVG{
+
+} */
+.graphIconImg{
+  height: 60px;
+}
+.currentIconImg{
+  height: 60px;
 }

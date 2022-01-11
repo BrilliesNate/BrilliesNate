@@ -1,0 +1,348 @@
+div,
+footer {
+  box-sizing: border-box;
+}
+h1,
+.right p,
+.additional,
+.week {
+  text-transform: uppercase;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: verdana, sans-serif;
+  /* color: rgba(51, 51, 51, 0.8); */
+  /* background: #fafafa; */
+}
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 40px;
+  min-height: 100%;
+  display: none;
+}
+.logo {
+  position: relative;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+.wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+h1 {
+  margin: 0;
+  padding: 30px 0px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 25px;
+}
+h1 span {
+  color: #fa5b3c;
+}
+.logo a {
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+  margin: 0;
+  padding: 0;
+  color: rgba(51, 51, 51, 0.8);
+  text-decoration: none;
+  font-size: 14px;
+}
+.layout {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 10px;
+  background: #eee;
+}
+.main {
+  display: inline-block;
+  position: relative;
+  padding: 10px 30px;
+  width: 35%;
+  height: 385px;
+  background: #fff;
+}
+#city {
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+}
+.currentDay,
+.currentDate {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+.currentTemperature {
+  color: #fa5b3c;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 55px 0 35px 0;
+}
+.main .temperatureMin0,
+.main .temperatureMax0 {
+  font-size: 15px;
+  margin: 5px 0 0 0;
+}
+.right {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  text-align: center;
+}
+.right p {
+  font-size: 11px;
+  padding-top: 25px;
+  color: rgba(51, 51, 51, 0.8);
+}
+.additional0 {
+  margin-top: 40px;
+  background: #fafafa;
+}
+.additional {
+  display: inline-block;
+  margin-right: -5px;
+  width: 33%;
+  padding-top: 10px;
+  font-size: 11px;
+  border-right: 1px solid #eee;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.wind {
+  border-right: none;
+  margin-right: 0;
+  width: 32%;
+}
+.week {
+  display: inline-block;
+  position: relative;
+  width: 64%;
+  height: 385px;
+  vertical-align: top;
+  padding: 0 5% 0 7%;
+}
+.week1,
+.week2 {
+  margin: 0;
+}
+.week1 {
+  margin-bottom: 10px;
+}
+.current0,
+.current1,
+.current2,
+.current3,
+.current4,
+.current5,
+.current6,
+.current7 {
+  display: inline-block;
+  height: 187px;
+  font-size: 11px;
+  padding: 10px 0 0 10px;
+  background: #fafafa;
+  border-right: 10px solid #eee;
+}
+.current0:hover,
+.current1:hover,
+.current2:hover,
+.current3:hover,
+.current4:hover,
+.current5:hover,
+.current6:hover,
+.current7:hover {
+  background: #fff;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  background: #eee;
+}
+footer p {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 15px;
+  text-align: center;
+  color: rgba(51, 51, 51, 0.8);
+}
+@media only screen and (max-width: 1110px) {
+  .layout {
+    width: 96%;
+    margin: 50px auto;
+    padding-right: 0;
+  }
+  .wrapper {
+    width: 96%;
+    margin: auto;
+  }
+  .main {
+    width: 42%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .week {
+    width: 57%;
+    padding-left: 10px;
+    padding-right: 0;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .layout {
+    padding: 40px;
+  }
+  .main {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+  }
+  .right {
+    right: 20%;
+    top: 110px;
+  }
+  .right canvas {
+    width: 145px;
+    height: 145px;
+  }
+  .main .currentTemperature,
+  .main .temperatureMax0,
+  .main .temperatureMin0 {
+    padding-left: 20%;
+  }
+  .main .currentTemperature {
+    margin-top: 62px;
+  }
+  .week {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+  }
+  .week1 {
+    margin-bottom: 1px;
+  }
+  .current0,
+  .current1,
+  .current2,
+  .current3,
+  .current4,
+  .current5,
+  .current6,
+  .current7 {
+    border-right: 1px solid #eee;
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .current0,
+  .current1,
+  .current2,
+  .current3,
+  .current4,
+  .current5,
+  .current6,
+  .current7 {
+    margin-right: -5px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .main .currentTemperature,
+  .main .temperatureMax0,
+  .main .temperatureMin0 {
+    padding-left: 10%;
+  }
+  .right {
+    right: 10%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .logo a {
+    bottom: 10px;
+    font-size: 12px;
+  }
+  .layout {
+    padding: 10px;
+  }
+  .week {
+    margin-top: 10px;
+  }
+  .current0,
+  .current1,
+  .current2,
+  .current3,
+  .current4,
+  .current5,
+  .current6,
+  .current7 {
+    font-size: 9px;
+    padding-left: 5px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main {
+    padding: 20px;
+  }
+  .main .currentTemperature {
+    margin-top: 82px;
+  }
+  .additional {
+    font-size: 9px;
+  }
+  .additional0 {
+    margin-top: 55px;
+  }
+  footer p {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .main .currentTemperature,
+  .main .temperatureMax0,
+  .main .temperatureMin0 {
+    padding-left: 0;
+  }
+  .right {
+    right: 20px;
+  }
+  .right p {
+    padding-top: 20px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .layout {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .right canvas {
+    width: 100px;
+    height: 100px;
+  }
+  .main .currentTemperature {
+    margin-top: 37px;
+  }
+}
+@media only screen and (max-width: 335px) {
+  .right {
+    top: 140px;
+  }
+}

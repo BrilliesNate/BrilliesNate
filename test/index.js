@@ -5,7 +5,7 @@ financialBtn.addEventListener("click", openCloseFinancialCard);
 
 let weatherCard = document.getElementById("weatherCard");
 let weatherBtn = document.getElementById("weatherBtn");
-weatherCard.style.transform = "translate(12.1px, 50.058px)";
+weatherCard.style.transform = "translate(-105px, 66.5px)";
 weatherBtn.addEventListener("click", openCloseWeatherCard);
 
 let enviroCard = document.getElementById("EnviroCard");
@@ -29,6 +29,7 @@ totalLoadCard.style.transform = "translate(-116.5px, 16px)";
 totalLoadBtn.addEventListener("click", openCloseTotalLoadCard);
 
 // *** total load Card open/close
+
 function openCloseTotalLoadCard() {
     if (totalLoadCard.style.transform ===  "translate(-116.5px, 16px)") {
         // *** loadShedding Card Card Open
@@ -55,6 +56,7 @@ function openCloseLoadsheddingCard() {
 } 
 
 // *** Bat Info Card open/close
+
 function openCloseBatInfoCard() {
     if (batCardInfoCard.style.transform === "translate(-80px, 0px)") {
         // ***  Bat Info Card Card Open
@@ -66,8 +68,14 @@ function openCloseBatInfoCard() {
         batCardInfoCard.style.transition = "all 0.5s";
     }
 }
-
+function go() {
+  setTimeout(openCloseBatInfoCard, 8000);
+  setTimeout(openCloseEnviromentalCard, 8000);
+  setTimeout(openCloseFinancialCard, 8000);
+  setTimeout(openCloseWeatherCard, 6000);
+}
 // *** Envirmental Card open/close
+
 function openCloseEnviromentalCard() {
     if (enviroCard.style.transform === "translate(80px, 0px)") {
         // *** Envirmental Card Open
@@ -81,9 +89,10 @@ function openCloseEnviromentalCard() {
 }
 
 // **** Financial Card open/close
+
 function openCloseFinancialCard() {
-    if ( weatherCard.style.transform === "translate(83.1px, 50.058px)") {
-        weatherCard.style.transform = "translate(12.1px, 50.058px)";
+    if ( weatherCard.style.transform === "translate(-7px, 66.5px)") {
+        weatherCard.style.transform =  "translate(-105px, 66.5px)";
         weatherCard.style.transition = "all 0.5s";
     }
     if (financialCard.style.transform === "translate(-80px, 0.058px)") {
@@ -97,18 +106,19 @@ function openCloseFinancialCard() {
     }
 }
 // **** Weather Card open/close
+
 function openCloseWeatherCard() {
     if ( financialCard.style.transform = "translate(0px, 0.058px)") {
         financialCard.style.transform = "translate(-80px, 0.058px)";
         financialCard.style.transition = "all 0.5s";
     }
-    if (weatherCard.style.transform === "translate(12.1px, 50.058px)") {
+    if (weatherCard.style.transform === "translate(-105px, 66.5px)") {
         // *** Weather Card Open
-        weatherCard.style.transform = "translate(83.1px, 50.058px)";
+        weatherCard.style.transform = "translate(-7px, 66.5px)";
         weatherCard.style.transition = "all 0.5s";
     } else {
         // Weather Card Close      
-        weatherCard.style.transform = "translate(12.1px, 50.058px)";
+        weatherCard.style.transform = "translate(-105px, 66.5px)";
         weatherCard.style.transition = "all 0.5s";
     }
 
@@ -291,7 +301,7 @@ am5.ready(function () {
       let pvCapVal = 420 + Number(this.newValue.toFixed(0));
       let pvCapLine = document.getElementById("pvCap");
       // let pvCapVal =  420;
-      console.log(pvCapVal + "############")
+      // console.log(pvCapVal + "############")
       pvCapLine.style.setProperty('--stroke-dashoffset', pvCapVal)
       pvCapLine.style.transition = "all 3s";
   
@@ -705,7 +715,7 @@ am5.ready(function () {
       let pvCapVal = 430 + Number(this.newValue.toFixed(0));
       let pvCapLine = document.getElementById("batCapLine");
       // let pvCapVal =  420;
-      console.log(pvCapVal + "############")
+      // console.log(pvCapVal + "############")
       pvCapLine.style.setProperty('--stroke-dashoffset', pvCapVal)
       pvCapLine.style.transition = "all 3s";
   
@@ -1009,10 +1019,6 @@ am5.ready(function () {
 
 
 
-
-
-
-
 // financialCard.style.transform = "translate(-90.5%, -58%)";
     // financialCard.style.transition = "all 0.5s";
 
@@ -1078,10 +1084,10 @@ am5.ready(function () {
 
 // }
 
-// let pvEditBtn = document.getElementById("pvEditBtn");
-// pvEditBtn.addEventListener("click", pvCardEdit);
-// // pvEditBtn.addEventListener("mouseover", pvEditBtnColorChange);
-// // pvEditBtn.addEventListener("mouseout", pvEditBtnColorChangeMouseout);
+let pvEditBtn = document.getElementById("pvEditBtn");
+pvEditBtn.addEventListener("click", pvCardEdit);
+// pvEditBtn.addEventListener("mouseover", pvEditBtnColorChange);
+// pvEditBtn.addEventListener("mouseout", pvEditBtnColorChangeMouseout);
 
 // let pvEditBtnColor = document.getElementById("pvEditBtnColor");
 
@@ -1093,15 +1099,36 @@ am5.ready(function () {
 //     pvEditBtnColor.style.fill = "rgb(184, 184, 184)";
 // }
 
-// let pvEdit = document.getElementById("cardEditWrapper")
-// let screenEdit = document.getElementById("screen")
+let pvEdit = document.getElementById("cardEditWrapper")
+let screenEdit = document.getElementById("screen")
 
-// function pvCardEdit() {
-//     pvEdit.style.display = "block";
-//     pvEdit.style.display = "flex";
-//     screenEdit.style.display = "flex";
-//     screenEdit.style.display = "block";
-// }
+function pvCardEdit() {
+  
+    pvEdit.style.display = "block";
+    pvEdit.style.display = "flex";
+    screenEdit.style.display = "flex";
+    screenEdit.style.display = "block";
+}
+
+let mainCardBtn = document.getElementById("graphIcon");
+mainCardBtn.addEventListener("click", mainCardChange);
+let quickCardBtn = document.getElementById("currentIcon");
+let quickCard = document.getElementById("quickVeiwSvg");
+let mainPvCard = document.getElementById("pvCardSVG")
+quickCardBtn.addEventListener("click", cardChange);
+
+function mainCardChange() {
+  quickCard.style.display = "none";
+  mainPvCard.style.display = "block";
+}
+
+
+
+function cardChange() {
+  quickCard.style.display = "block";
+  mainPvCard.style.display = "none";
+}
+
 
 // let weatherCard = document.getElementById("weatherCard");
 // let weatherBtn = document.getElementById('weatherBtn');

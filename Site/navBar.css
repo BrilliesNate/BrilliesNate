@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 * {
     border: 0;
@@ -11,7 +11,7 @@
   
   a {
     color: inherit;
-    font-family: 'Noto Sans';
+    /* font-family: 'Noto Sans'; */
     font-size: inherit;
     text-decoration: none;
   }
@@ -64,7 +64,7 @@
     display: inline-block;
     float: left;
     list-style: none;
-    font-family: 'Noto Sans';
+    font-family: 'Raleway';
     /* margin-right: 14px; */
     margin-top: -2px;
     text-align: right;

@@ -61,4 +61,27 @@ webDevCard.onmouseout = function(){
     webDevCard.style.transition = "all 0.3s";
 };
 
+let appDevCard = document.getElementById("appDevCard");
+let appIconGif = document.getElementById("appIconGif");
+let appIcon = document.getElementById("appIcon");
+
+appDevCard.onmouseover = function(){
+    appDevCard.style.background = "#ADD8E6"
+    appDevCard.style.transition = "all 0.5s";
+    appIconGif.style.display = "block";
+    appIcon.style.display = "none";
+
+    appIcon.style.transition = "all 0.5s";
+    appIconGif.style.transition = "all 0.5s";
+};
+appDevCard.onmouseout = function(){
+    appIconGif.style.display = "none";
+    appIcon.style.display = "block";
+
+    appIcon.style.transition = "all 0.5s";
+    appIconGif.style.transition = "all 0.5s";
+    appDevCard.style.background = "white"
+    appDevCard.style.transition = "all 0.3s";
+};
+
 

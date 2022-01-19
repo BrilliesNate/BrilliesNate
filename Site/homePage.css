@@ -12,6 +12,11 @@ body{
   margin-left: 95px;
 }
 
+/* .footerVieo{
+  width: 1000px;
+
+} */
+
 .myWorkGif {
   width: 350px;
   margin-left: 30px;
@@ -183,7 +188,7 @@ h3 {
   margin-top: 20px;
   background-image: linear-gradient(to top, rgba(0, 49, 64, 1),white, white);
   width: 100%;
-  height: 2500px;
+  height: 2000px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -331,10 +336,30 @@ height: 200px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   text-align: center;
 }
+.videoEditCard{
+  padding: 30px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("videoEdit.gif");
+  /* background-size: 200px; */
+  border-radius: 10px;
+  margin-right: 40px;
+  width: 340px;
+  height: 440px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  text-align: center;
+}
 
 #webDevIcon{
   /* position: absolute; */
 width:80px;
+}
+#appIcon{
+  /* position: absolute; */
+width:160px;
 }
 #gearsGif{
   margin-bottom: 20px;
@@ -345,6 +370,16 @@ width:80px;
   position: relative;
   /* position: absolute; */
   width:80px; 
+}
+#appIconGif{
+  margin-bottom: 20px;
+  display: none;
+  /* margin-left: 10px; */
+  /* left:0; */
+  z-index: 9;
+  position: relative;
+  /* position: absolute; */
+  width:160px; 
 }
 
 #webDevBtn{
@@ -384,3 +419,121 @@ width:80px;
 
 /* -webkit-linear-gradient(
 90deg,#1345e6 0%,#ed239f 100%); */
+.brillLogo{
+  margin-top: 10px;
+  width: 90px;
+}
+
+.recentWorkWrapper{
+  
+   /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-content: center; */
+  width: 100%;
+  height: 1600px;
+  /* background: blue; */
+}
+
+.workPhotosWrapper{
+  margin-top: 100px;
+  display: flex;
+  width: 1400px;
+  height: 1200px;
+  /* background: white; */
+}
+
+.leftWrapper{
+width:100%;
+height: 1200px;
+/* background: #46c1f6; */
+}
+
+.rightWrapper{
+width:100%;
+height: 1200px;
+/* background: #de463b; */
+}
+
+.photo1{
+  background-image: url("adamMockup.jpeg");
+  border-top-left-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* background: white; */
+  width: 100%;
+  margin-bottom: 30px;
+  height: 700px;
+}
+.photo2{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* background: white; */
+  width: 100%;
+  height: 350px;
+  border-bottom-left-radius: 20px;
+}
+.photo3{
+  border-top-right-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-left: 30px;
+  /* background: white; */
+  width: 100%;
+  height: 250px;
+}
+
+.photo4_5Wrapper{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 30px;
+  /* background: white; */
+  width: 100%;
+  height: 300px;
+}
+.photo4{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+width: 100%;
+height: 300px;
+/* background: white; */
+}
+.photo5{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* background: white; */
+  width: 100%;
+  height: 300px;
+  margin-left: 30px;
+
+}
+.photo6{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin-top: 30px;
+  margin-left: 30px;
+  /* background: white; */
+  width: 100%;
+  height: 470px;
+  border-bottom-right-radius: 20px;
+}
+
+.footer{
+  background-image: url(flow.gif);
+  background-size: 954px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 500px;
+}
+
+.padding{
+  padding: 10px;
+}
+
+.blocker{
+  border-radius: 100px;
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background: white;
+}

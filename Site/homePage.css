@@ -214,7 +214,7 @@ h3 {
     border-radius: 20px;
     margin-bottom: 100px;
    
-    height: 400px;
+    height: 281px;
     width: 100%;
     /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
 }
@@ -420,8 +420,9 @@ width:160px;
 /* -webkit-linear-gradient(
 90deg,#1345e6 0%,#ed239f 100%); */
 .brillLogo{
-  margin-top: 10px;
-  width: 90px;
+  margin-right: 50px;
+  /* margin-top: 10px; */
+  width: 100px;
 }
 
 .recentWorkWrapper{
@@ -456,24 +457,42 @@ height: 1200px;
 }
 
 .photo1{
-  background-image: url("adamMockup.jpeg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* background-image: url("adamMockup.jpeg"); */
+  background: #d9d9d9;
   border-top-left-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   /* background: white; */
   width: 100%;
   margin-bottom: 30px;
   height: 700px;
 }
 .photo2{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   /* background: white; */
   width: 100%;
   height: 350px;
   border-bottom-left-radius: 20px;
 }
 .photo3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: #d9d9d9;
   border-top-right-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   margin-left: 30px;
   /* background: white; */
   width: 100%;
@@ -481,6 +500,7 @@ height: 1200px;
 }
 
 .photo4_5Wrapper{
+  /* background: #d9d9d9; */
   display: flex;
   flex-direction: row;
   margin-top: 30px;
@@ -490,13 +510,25 @@ height: 1200px;
   height: 300px;
 }
 .photo4{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: #d9d9d9;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 width: 100%;
 height: 300px;
 /* background: white; */
 }
 .photo5{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: #d9d9d9;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   /* background: white; */
   width: 100%;
   height: 300px;
@@ -504,10 +536,16 @@ height: 300px;
 
 }
 .photo6{
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   margin-top: 30px;
   margin-left: 30px;
-  /* background: white; */
+  background: #d9d9d9;
   width: 100%;
   height: 470px;
   border-bottom-right-radius: 20px;
@@ -530,10 +568,49 @@ height: 300px;
 }
 
 .blocker{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   border-radius: 100px;
-  margin-top: 30px;
+  margin-top: 9px;
   width: 150px;
   height: 150px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   background: white;
+}
+
+.brillOneLogo{
+width: 100px;
+}
+
+.logoIntroVid{
+  width: 819px;
+}
+.renwVideo{
+  width:500px
+}
+
+.photo1Img{
+  
+  width:550px;
+}
+.photo2Img{
+  margin-top: 20px;
+  width:620px;
+}
+
+.photo3Img{
+  width:420px;
+}
+
+.photo5Img{
+  width:400px;
+}
+
+.dashboard{
+  border-radius: 140px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }

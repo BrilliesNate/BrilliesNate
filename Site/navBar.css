@@ -22,7 +22,9 @@
     ======================================================*/
   #navbar {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    background: white;
+    /* background: white; */
+    background: 	rgb(255,255,255,0.7);
+    
     color: rgb(13, 26, 38);
     position: fixed;
     top: 0;

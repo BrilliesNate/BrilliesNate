@@ -85,3 +85,30 @@ appDevCard.onmouseout = function(){
 };
 
 
+let homeBtn = document.getElementById("homeBtn");
+let aboutMeBtn = document.getElementById("aboutMeBtn");
+let myServicesBtn = document.getElementById("myServicesBtn");
+let myPortfolioBtn = document.getElementById("myPortfolioBtn");
+
+myPortfolioBtn.onclick = function() {
+    let element = document.getElementById("target");   
+    element.scrollIntoView({behavior: "smooth"});
+}
+
+myServicesBtn.onclick = function() {
+    let element = document.getElementById("myservicesTarget"); 
+    element.scrollIntoView({behavior: "smooth"});
+}
+
+aboutMeBtn.onclick = function () {
+    let element = document.getElementById("aboutMeTarget"); 
+    element.scrollIntoView({behavior: "smooth"});
+}
+
+
+homeBtn.onclick = function () {
+    let element = document.getElementById("homeTarget"); 
+    element.scrollIntoView({behavior: "smooth"});
+}
+
+// function scrol(){

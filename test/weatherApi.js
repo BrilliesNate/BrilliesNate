@@ -70,10 +70,11 @@ $(document).ready(function() {
    function weather(position) {    //geolocation
      var lat = position.coords.latitude;  //getting coorginates
 	 var lon = position.coords.longitude;
+
 	 
 	 var url = "https://api.darksky.net/forecast/cf8fe2973a4fcd29c941731459acef8d/";
      var api_call = url + lat + "," + lon;
-   
+    
 	$.ajax({
            type: 'GET',
            url: api_call,

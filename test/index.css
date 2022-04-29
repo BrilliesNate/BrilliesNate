@@ -5,17 +5,37 @@ body{
   justify-content: center;
 }
 
-#pvChart{
-  right: 670px;
-  top: 232px;
+/* .svgWrapper{
+  width: 100%;
+  height:100%;
+} */
+
+
+
+#pvChart{  
   position: absolute;
-  width: 589px;
+  width: 287px;
   height: 130px;
-  /* background: red; */
-  /* display: none; */
+  background: red;
+  display: none;
+  /* position: fixed; */
+  /* z-index:100 */
+}
+.mainWrapper{
+  /* z-index: -1 */
+  /* width: fit-content; */
+  /* height: fit-content; */
+  width: fit-content;
+  background: rgb(65, 63, 63);
+  /* opacity: 0.3; */
+  display:flex;
+  justify-content: center;
+    align-items: center;
+  /* align-items: center; */
+  
 }
 #batChart{
-  /* display: none; */
+  display: none;
   right: 670px;
   bottom: 63px;
   position: absolute;
@@ -24,7 +44,7 @@ body{
   /* background: red; */
 }
 #loadChart{
-  /* display: none; */
+  display: none;
   right: 156px;
     bottom: 393px;
     position: absolute;
@@ -43,7 +63,7 @@ body{
   stroke-dasharray: 450;
   stroke-dashoffset: var(--stroke-dashoffset);
 }
-#loadCapLine {
+#loadCap {
   --stroke-dashoffset: 420;
   stroke-dasharray: 450;
   stroke-dashoffset: var(--stroke-dashoffset);
@@ -182,4 +202,33 @@ body{
 }
 .currentIconImg{
   height: 60px;
+}
+
+#div {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  background-color: #aa00ee;
+  color: black;
+  text-align: center;
+  line-height: 60px;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  font-size: 32px;
+}
+
+.circleWrapper{
+  width:10px;
+  height: 10px;
+  background: red;
+  border-radius: 10px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridGif{
+  width: 20px;
 }

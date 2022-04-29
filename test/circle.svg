@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="6.4927mm" height="6.4927mm" version="1.1" viewBox="0 0 6.4927 6.4927" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter848" x="-.43728" y="-.43728" width="1.8746" height="1.8746" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.63107284"/>
+  </filter>
+ </defs>
+ <g transform="translate(-60.911 -121.46)">
+  <circle cx="64.158" cy="124.71" r="1.7318" fill="#37b526" filter="url(#filter848)" stroke-linecap="round" stroke-linejoin="round" stroke-width=".002" style="mix-blend-mode:normal"/>
+ </g>
+</svg>

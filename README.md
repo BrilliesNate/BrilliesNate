@@ -8,23 +8,6 @@
 
 Full Stack Developer passionate about creating seamless, high-performance applications with a special focus on cross-platform mobile development using Flutter. I enjoy solving complex problems and transforming ideas into elegant, user-friendly experiences.
 
-```dart
-class Developer {
-  final String name = "Nate Brillie";
-  final List<String> roles = ["Full Stack Developer", "Flutter Specialist", "UI/UX Enthusiast"];
-  final Map<String, List<String>> skills = {
-    "Mobile": ["Flutter", "Dart", "Firebase", "RESTful APIs"],
-    "Frontend": ["React", "JavaScript", "HTML/CSS", "Responsive Design"],
-    "Backend": ["Node.js", "Express", "MongoDB", "SQL", "GraphQL"],
-    "DevOps": ["Git", "CI/CD", "Docker", "Cloud Services"],
-  };
-  
-  void sayHi() {
-    print("Thanks for stopping by, let's build something amazing together!");
-  }
-}
-```
-
 ## 🔥 My Tech Stack
 
 <div align="center">

@@ -1,4 +1,4 @@
-# Nate Brillie | Full Stack Developer & Flutter Specialist 👨‍💻
+# Nathan Brill | Full Stack Developer & Flutter Specialist 👨‍💻
 
 [![GitHub followers](https://img.shields.io/github/followers/BrilliesNate?style=social)](https://github.com/BrilliesNate)
 [![Twitter Follow](https://img.shields.io/twitter/follow/YourTwitterHandle?style=social)](https://twitter.com/YourTwitterHandle)
